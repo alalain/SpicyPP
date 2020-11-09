@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.17)
 project(Spicypp)
 
 set(CMAKE_CXX_STANDARD 17)
-include(GoogleTest)
+#include(GoogleTest)
 
 if (MSVC)
     # warning level 4 and all warnings as errors
@@ -18,5 +18,5 @@ add_executable(spicy src/SpicyPP.cpp)
 
 target_link_libraries(spicy LINK_PUBLIC matrix)
 
-add_executable(matrix_test src/Backend/Matrix_test.cpp)
-gtest_discover_tests(matrix_test)
+#add_executable(matrix_test src/Backend/Matrix_test.cpp)
+#gtest_discover_tests(matrix_test)
