@@ -4,13 +4,11 @@ on: [push]
 
 jobs:
   Spicy-build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2.0.0
-    - name: Build project
-      uses: nicledomaS/cmake_build_action@v1
+  - name: Install Qt
+      uses: jurplel/install-qt-action@v2
       with:
-        submodule_update: ON
-        run_tests: ON
-        unit_test_build: -Dtest=ON
+        version: '5.12.9'
+        host: 'linux'
+        target: 'desktop'
+        dir: '${{ github.workspace }}/src/'
+        install-deps: 'true'
