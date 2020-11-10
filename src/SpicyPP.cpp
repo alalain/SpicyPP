@@ -12,10 +12,6 @@
 
 using namespace std;
 
-int main() {
-  {
-    Matrix m = Matrix(5,6);
-    m.MatrixShow();
-  }
+int main(int argc, char** argv) {
 	return 0;
 }

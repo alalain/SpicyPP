@@ -7,19 +7,22 @@
 
 #include "Matrix.h"
 
-Matrix::Matrix(int rows, int colums) :
-  rows(rows), colums(colums)
+Matrix::Matrix(int rows, int columns, double* values) :
+  rows(rows), columns(columns)
 {
-  if(rows <= 0 || colums <= 0){
+  if(rows <= 0 || columns <= 0){
     matrix = nullptr;
     return;
   }
 
   matrix = new double*[rows];
   for(int row = 0; row < rows; row++) {
-    matrix[row] = new double[colums];
-    for(int colum = 0; colum < colums; colum++){
-      matrix[row][colum] = 0.0;
+    matrix[row] = new double[columns];
+    for(int column = 0; column < columns; column++){
+      if(values == nullptr)
+        matrix[row][column] = 0.0;
+      else
+        matrix[row][column] = values[row*columns+column];
     }
   }
 }
