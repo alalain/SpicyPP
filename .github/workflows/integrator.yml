@@ -4,7 +4,9 @@ on: [push]
 
 jobs:
   Spicy-build:
-  - name: Install Qt
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
         version: '5.12.9'
@@ -13,9 +15,9 @@ jobs:
         dir: '${{ github.workspace }}/example/'
         install-deps: 'true'
         cached: 'false'
-  - name: Checkout
+    - name: Checkout
       uses: actions/checkout@v2.0.0
-  - name: Build project
+    - name: Build project
       uses: nicledomaS/cmake_build_action@v1
       with:
         submodule_update: ON
