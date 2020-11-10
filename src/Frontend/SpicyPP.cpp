@@ -10,7 +10,7 @@
 #include <iostream>
 #include "MainWindow.h"
 
-#include "Backend/Matrix.h"
+#include "../Backend/Matrix.h"
 
 using namespace std;
 

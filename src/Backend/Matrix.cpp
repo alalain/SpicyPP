@@ -42,6 +42,7 @@ Matrix::Matrix(const Matrix &other)
 }
 Matrix getInverse(Matrix& A)
 {
+  /*
 	double pivot[A.rows] = 0;
 
 	Matrix bigmatrix(A.rows,2*A.colums);
@@ -75,7 +76,7 @@ Matrix getInverse(Matrix& A)
 	}
 	
 	
-	return invmatrix
+	return invmatrix*/
 }
 Matrix& Matrix::operator=(const Matrix &other)
 {

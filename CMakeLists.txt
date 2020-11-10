@@ -19,10 +19,9 @@ endif()
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 add_library(matrix STATIC src/Backend/Matrix.cpp)
-add_executable(spicy src/SpicyPP.cpp
-                     src/MainWindow.cpp
-                     src/MainWindow.h
-                     src/MainWindow.ui)
+add_executable(spicy src/Frontend/SpicyPP.cpp
+                     src/Frontend/MainWindow.cpp
+                     src/Frontend/MainWindow.ui)
 
 target_link_libraries(spicy LINK_PUBLIC matrix Qt5::Widgets)
 
