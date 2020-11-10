@@ -1,0 +1,1 @@
+#Installing Qt developement environement
