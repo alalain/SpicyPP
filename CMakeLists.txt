@@ -3,6 +3,7 @@ project(Spicypp)
 
 set(CMAKE_CXX_STANDARD 17)
 #include(GoogleTest)
+#include(QT)
 
 if (MSVC)
     # warning level 4 and all warnings as errors
