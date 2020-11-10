@@ -18,5 +18,4 @@ add_executable(spicy src/SpicyPP.cpp)
 
 target_link_libraries(spicy LINK_PUBLIC matrix)
 
-#add_executable(matrix_test src/Backend/Matrix_test.cpp)
 #gtest_discover_tests(matrix_test)
