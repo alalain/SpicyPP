@@ -17,10 +17,6 @@ else()
     add_compile_options(-Wall)
 endif()
 
-#if(EXISTS "${CMAKE_SOURCE_DIR}/.git")
-#  set(default_build_type "Debug")
-#endif()
-
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 add_library(matrix STATIC src/Backend/Matrix.cpp)
 add_executable(spicy src/Frontend/SpicyPP.cpp
