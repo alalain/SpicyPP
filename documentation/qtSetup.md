@@ -29,3 +29,7 @@ add_executable(spicy src/SpicyPP.cpp
                      src/MainWindow.ui
                      src/foo.cpp)
 ```
+
+## Debug config
+To enable debug. Add the following value to the marked place:
+  ![DebugConfig](./Debug_config.png)
