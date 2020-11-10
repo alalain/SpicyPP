@@ -6,7 +6,7 @@ To get the project running on the QT editor on the EmbSw ubuntu VM please read t
   
 ## 2. New Kit
   Now we want to make an new kit because compilation fails with QT's own kit. Go to tab Kits -> Add put in the following configurations:
-  ![Create Kit)(./kits.PNG)
+  ![Create Kit](./kits.PNG)
 
 ## 3. Import project
   To import project, go to File->Open File or Project and select the CMakeLits.txt file in the repository. In the following window select the newly created Kit as Kit for the       Project.
