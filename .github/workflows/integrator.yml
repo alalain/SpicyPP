@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   Spicy-build:
-    runs-on: windows
+    runs-on: windows-latest
     steps:
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
