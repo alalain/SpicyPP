@@ -16,8 +16,6 @@ int main(){
   m1.MatrixShow();
   Matrix m2 = Matrix(2,3);
   m2.setValue(2.0, -1,2);
-  m2.MatrixShow();
-  m2.getInverse();
   return 0;
 }
 
@@ -79,6 +77,7 @@ Matrix getInverse(Matrix& A)
 	
 	
 	return invmatrix*/
+	return Matrix(0,0);
 }
 
 
