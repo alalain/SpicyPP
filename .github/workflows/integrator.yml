@@ -4,14 +4,15 @@ on: [push]
 
 jobs:
   Spicy-build:
-    runs-on: ubuntu-latest
+    runs-on: windows
     steps:
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
         version: '5.12.9'
-        host: 'linux'
+        host: 'Windows'
         target: 'desktop'
+        arch: 'win64_msvc2017_64'
         dir: '${{ github.workspace }}/example/'
         install-deps: 'true'
         aqtversion: '==0.9.7'
