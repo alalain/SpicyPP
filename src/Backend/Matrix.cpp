@@ -43,9 +43,9 @@ Matrix::Matrix(int rows, int columns, vector<double> values)
 
 Matrix getInverse(Matrix& A)
 {
-  /*
-	double pivot[A.rows] = 0;
 
+	double pivot = 0;
+	/*
 	Matrix bigmatrix(A.rows,2*A.colums);
 	Matrix result(A.rows,A.colums);
 	
@@ -56,8 +56,8 @@ Matrix getInverse(Matrix& A)
 			 bigmatrix[row][colum] = 1.0;
 		  else
 			 bigmatrix[row][colum] = 0.0;
-        }
-    }
+      }
+   }
 	
 	for(int row = 0; row < A.rows; row++) {
 		if( A.matrix[row][row] != 0){
