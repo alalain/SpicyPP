@@ -21,7 +21,7 @@ endif()
 #  set(default_build_type "Debug")
 #endif()
 
-find_package(Qt5 COMPONENTS Widgets REQUIRED)
+#find_package(Qt5 COMPONENTS Widgets REQUIRED)
 add_library(matrix STATIC src/Backend/Matrix.cpp)
 add_executable(spicy src/Frontend/SpicyPP.cpp
                      src/Frontend/MainWindow.cpp
