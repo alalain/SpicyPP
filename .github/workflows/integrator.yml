@@ -9,15 +9,10 @@ jobs:
     - name: Install Qt
       uses: jurplel/install-qt-action@v2
       with:
-        version: '5.12.9'
+        version: '5.12.4'
         host: 'windows'
         target: 'desktop'
-        arch: 'win64_msvc2017_64'
-        dir: '${{ github.workspace }}/example/'
-        install-deps: 'true'
-        aqtversion: '==0.9.7'
         py7zrversion: '==0.10.1'
-        cached: 'false'
     - name: Checkout
       uses: actions/checkout@v2.0.0
     - name: Build project
