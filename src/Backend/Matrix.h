@@ -42,9 +42,9 @@ class Matrix
     {
       using namespace std;
       cout << "Matrix:" << endl;
-      for(int i = 0; i < values.size(); i++)
+      for(unsigned int i = 0; i < values.size(); i++)
       {
-        for(int j = 0; j < values[i].size(); j++){
+        for(unsigned int j = 0; j < values[i].size(); j++){
           cout << values[i][j] << " ";
         }
         cout << endl;
