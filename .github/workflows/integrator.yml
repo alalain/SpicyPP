@@ -10,7 +10,7 @@ jobs:
       uses: jurplel/install-qt-action@v2
       with:
         version: '5.12.9'
-        host: 'Windows'
+        host: 'windows'
         target: 'desktop'
         arch: 'win64_msvc2017_64'
         dir: '${{ github.workspace }}/example/'
