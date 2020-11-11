@@ -10,14 +10,14 @@
 using namespace std;
 
 // Backend main
-/*int main(){
+int main(){
   vector<double> v = {1.0,2.0,3.0, 4.0, 5.0};
   Matrix m1 = Matrix(2,2,v);
   m1.MatrixShow();
   Matrix m2 = Matrix(2,3);
   m2.MatrixShow();
   return 0;
-}*/
+}
 
 Matrix::Matrix(int rows, int columns, vector<double> values)
 {
@@ -42,9 +42,9 @@ Matrix::Matrix(int rows, int columns, vector<double> values)
 
 Matrix getInverse(Matrix& A)
 {
-  /*
-	double pivot[A.rows] = 0;
 
+	double pivot[A.rows] = 0;
+	/*
 	Matrix bigmatrix(A.rows,2*A.colums);
 	Matrix result(A.rows,A.colums);
 	
@@ -55,8 +55,8 @@ Matrix getInverse(Matrix& A)
 			 bigmatrix[row][colum] = 1.0;
 		  else
 			 bigmatrix[row][colum] = 0.0;
-        }
-    }
+      }
+   }
 	
 	for(int row = 0; row < A.rows; row++) {
 		if( A.matrix[row][row] != 0){
