@@ -1,10 +1,3 @@
-/*
- * Matrix.h
- *
- *  Created on: Nov 4, 2020
- *      Author: Marius Baumann
- */
-
 #ifndef BACKEND_MATRIX_H_
 #define BACKEND_MATRIX_H_
 
@@ -29,7 +22,18 @@ class Matrix
     void setValueColumn(std::vector<double> values, int column);
     void setValueRow(std::vector<double> values, int row);
 
+    /**
+       * A pure virtual member.
+       * @return inverted Matrix
+     */
     Matrix getInverse() const;
+
+    /**
+     * Multiplying left with right Matrix. Watch out for Order and dimensions of params.
+     * @param left: Matrix with dimensions a*N
+     * @param right: Matrix with dimensions N*b
+     * @return New Multiplied Matrix
+     */
     friend Matrix operator*(Matrix& left, Matrix& right);
     friend bool operator==(Matrix& left, Matrix& right);
 

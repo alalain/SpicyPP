@@ -10,14 +10,15 @@
 using namespace std;
 
 // Backend main
-/*int main(){
+int main(){
   vector<double> v = {1.0,2.0,3.0, 4.0, 5.0};
   Matrix m1 = Matrix(2,2,v);
   m1.MatrixShow();
   Matrix m2 = Matrix(2,3);
   m2.MatrixShow();
+  m2.getInverse();
   return 0;
-}*/
+}
 
 Matrix::Matrix(int rows, int columns, vector<double> values)
 {
