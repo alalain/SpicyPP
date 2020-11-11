@@ -3,10 +3,10 @@ name: C/C++ CI
 on: [push]
 
 jobs:
-  Spicy-build:
+  Spicy-Checkout:
     runs-on: ubuntu-latest
     container:
-      image: rabits/qt:5.15-desktop
+      image: zachdeibert/IDEs/QtCreator/
       options: --user 1001
     steps:
     - name: Checkout
