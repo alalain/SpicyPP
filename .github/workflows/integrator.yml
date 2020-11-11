@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: rabits/qt:5.14-desktop
+      options: --user 1001
     steps:
     - name: Checkout
       uses: actions/checkout@v2.0.0
