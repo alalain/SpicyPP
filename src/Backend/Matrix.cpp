@@ -15,6 +15,7 @@ int main(){
   Matrix m1 = Matrix(2,2,v);
   m1.MatrixShow();
   Matrix m2 = Matrix(2,3);
+  m2.setValue(2.0, -1,2);
   m2.MatrixShow();
   m2.getInverse();
   return 0;
@@ -43,9 +44,9 @@ Matrix::Matrix(int rows, int columns, vector<double> values)
 
 Matrix getInverse(Matrix& A)
 {
-  /*
-	double pivot[A.rows] = 0;
 
+	double pivot = 0;
+	/*
 	Matrix bigmatrix(A.rows,2*A.colums);
 	Matrix result(A.rows,A.colums);
 	
@@ -56,8 +57,8 @@ Matrix getInverse(Matrix& A)
 			 bigmatrix[row][colum] = 1.0;
 		  else
 			 bigmatrix[row][colum] = 0.0;
-        }
-    }
+      }
+   }
 	
 	for(int row = 0; row < A.rows; row++) {
 		if( A.matrix[row][row] != 0){
@@ -80,3 +81,16 @@ Matrix getInverse(Matrix& A)
 	return invmatrix*/
 }
 
+
+void Matrix::setValue(double value, int row, int column)
+{
+  if(row <= 0 || row > values.size() || column <= 0 || column > values[0].size())
+    return;
+  values[row-1][column-1] = value;
+}
+
+
+/*friend Matrix operator*(Matrix& left, Matrix& right)
+{
+
+} */
