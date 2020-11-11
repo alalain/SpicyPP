@@ -4,24 +4,15 @@ on: [push]
 
 jobs:
   Spicy-build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
+    container:
+      image: rabits/qt:5.14-desktop
     steps:
-    - name: Install Qt
-      uses: jurplel/install-qt-action@v2
-      with:
-        version: '5.12.4'
-        host: 'windows'
-        target: 'desktop'
-        py7zrversion: '==0.10.1'
     - name: Checkout
       uses: actions/checkout@v2.0.0
-    - name: Get latest CMake and ninja
-      # Using 'latest' branch, the latest CMake and ninja are installed.
-      uses: lukka/get-cmake@latest
     - name: Build project
       uses: nicledomaS/cmake_build_action@v1
       with:
-        config: debug
         submodule_update: ON
         run_tests: ON
         #unit_test_build: -Dtest=ON
