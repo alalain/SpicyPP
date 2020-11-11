@@ -43,7 +43,7 @@ Matrix::Matrix(int rows, int columns, vector<double> values)
 Matrix getInverse(Matrix& A)
 {
 
-	double pivot[A.rows] = 0;
+	double pivot = 0;
 	/*
 	Matrix bigmatrix(A.rows,2*A.colums);
 	Matrix result(A.rows,A.colums);
