@@ -78,6 +78,8 @@ Matrix getInverse(Matrix& A)
 	
 	
 	return invmatrix*/
+  Matrix ret(1,1);
+  return ret;
 }
 
 
