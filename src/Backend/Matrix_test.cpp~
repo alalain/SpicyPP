@@ -4,9 +4,9 @@
  *  Created on: Nov 4, 2020
  *      Author: user
  */
- 
-#include <gtest/gtest.h>
+
 #include "Matrix.h"
+#include <gtest/gtest.h>
 
 enum
 {

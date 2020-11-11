@@ -7,44 +7,45 @@
 
 #include "Matrix.h"
 
-Matrix::Matrix(int rows, int columns, double* values) :
-  rows(rows), columns(columns)
+using namespace std;
+
+// Backend main
+int main(){
+  vector<double> v = {1.0,2.0,3.0, 4.0, 5.0};
+  Matrix m1 = Matrix(2,2,v);
+  m1.MatrixShow();
+  Matrix m2 = Matrix(2,3);
+  m2.setValue(2.0, -1,2);
+  m2.MatrixShow();
+  return 0;
+}
+
+Matrix::Matrix(int rows, int columns, vector<double> values)
 {
+  this->values = vector<vector<double>>();
+
   if(rows <= 0 || columns <= 0){
-    matrix = nullptr;
     return;
   }
 
-  matrix = new double*[rows];
   for(int row = 0; row < rows; row++) {
-    matrix[row] = new double[columns];
+    this->values.push_back(vector<double>());
     for(int column = 0; column < columns; column++){
-      if(values == nullptr)
-        matrix[row][column] = 0.0;
+      int index = row * columns + column;
+      if(index >= values.size())
+        this->values[row].push_back(0.0);
       else
-        matrix[row][column] = values[row*columns+column];
+        this->values[row].push_back(values[index]);
     }
   }
 }
 
-Matrix::~Matrix()
-{
-  for(int row = 0; row < rows; row++){
-    delete[] matrix[row];
-  }
-  delete[] matrix;
-}
 
-Matrix::Matrix(const Matrix &other)
-{
-  // TODO Auto-generated constructor stub
-
-}
 Matrix getInverse(Matrix& A)
 {
-  /*
-	double pivot[A.rows] = 0;
 
+	double pivot = 0;
+	/*
 	Matrix bigmatrix(A.rows,2*A.colums);
 	Matrix result(A.rows,A.colums);
 	
@@ -55,8 +56,8 @@ Matrix getInverse(Matrix& A)
 			 bigmatrix[row][colum] = 1.0;
 		  else
 			 bigmatrix[row][colum] = 0.0;
-        }
-    }
+      }
+   }
 	
 	for(int row = 0; row < A.rows; row++) {
 		if( A.matrix[row][row] != 0){
@@ -78,9 +79,17 @@ Matrix getInverse(Matrix& A)
 	
 	return invmatrix*/
 }
-Matrix& Matrix::operator=(const Matrix &other)
-{
-  // TODO Auto-generated method stub
 
+
+void Matrix::setValue(double value, int row, int column)
+{
+  if(row <= 0 || row > values.size() || column <= 0 || column > values[0].size())
+    return;
+  values[row-1][column-1] = value;
 }
 
+
+/*friend Matrix operator*(Matrix& left, Matrix& right)
+{
+
+} */

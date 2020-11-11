@@ -9,19 +9,15 @@
 #define BACKEND_MATRIX_H_
 
 #include <iostream> //TODO wont be needed in final version
+#include <vector>
 
 class Matrix
 {
   private:
-    double** matrix;
-    int rows;
-    int columns;
+    std::vector<std::vector<double>> values;
 
   public:
-    Matrix(int rows, int columns, double* values = nullptr);   //instantiate Matrix in heap (values has to be length of rows*columns)
-    ~Matrix();                                                //delete data on heap
-    Matrix(const Matrix &other);                              //no shallow Copy
-    Matrix& operator=(const Matrix &other);                   //no shallow Copy
+    Matrix(int rows, int columns, std::vector<double> values = std::vector<double>());       //instantiate Matrix
 
     double getValue(int row, int column) const;
     int getRows() const;
@@ -29,9 +25,9 @@ class Matrix
     bool hasError() const; //if rows or columns <= 0;
 
     void setValue(double value, int row = 0, int column = 0);
-    void setValues(double* values, int count, int rowStart = 0, int columnStart = 0);
-    void setValueColumn(double* values, int column);
-    void setValueRow(double* values, int row);
+    void setValues(std::vector<double> values, int rowStart = 0, int columnStart = 0);
+    void setValueColumn(std::vector<double> values, int column);
+    void setValueRow(std::vector<double> values, int row);
 
     Matrix getInverse() const;
     friend Matrix operator*(Matrix& left, Matrix& right);
@@ -42,10 +38,10 @@ class Matrix
     {
       using namespace std;
       cout << "Matrix:" << endl;
-      for(int i = 0; i < rows; i++)
+      for(int i = 0; i < values.size(); i++)
       {
-        for(int j = 0; j < columns; j++){
-          cout << matrix[i][j] << " ";
+        for(int j = 0; j < values[i].size(); j++){
+          cout << values[i][j] << " ";
         }
         cout << endl;
       }
