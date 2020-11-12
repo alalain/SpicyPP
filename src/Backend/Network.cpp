@@ -4,19 +4,14 @@
  *  Created on: Nov 11, 2020
  *      Author: user
  */
-#include <string>
-#include <vector>
-
 #include "Network.h"
 #include "Resistor.h"
 #include "Component.h"
 
-using namespace std;
+#include <string>
+#include <vector>
 
-Network::~Network(){
-  for(unsigned int i = 0; i < components.size(); ++i)
-    delete components[i];
-}
+using namespace std;
 
 void Network::GenerateMatrixAndVector()
 {
@@ -25,13 +20,13 @@ void Network::GenerateMatrixAndVector()
 void Network::GenerateNetList()
 {
   netList.clear();
-  for(unsigned int i = 0; i < components.size(); ++i){
-    string netRow = components[i]->GetName() + " " +
-                    to_string(components[i]->GetNode1()) + " " +
-                    to_string(components[i]->GetNode2());
-    vector<double> values = components[i]->GetValues();
-    for(unsigned int j = 0; j < values.size(); ++j)
-      netRow += " " + to_string(values[j]);
+  for (const std::unique_ptr<Component>& component : components){
+    string netRow = component->GetName() + " " +
+                    to_string(component->GetNode1()) + " " +
+                    to_string(component->GetNode2());
+    vector<double> values = component->GetValues();
+    for(double value : values)
+      netRow += " " + to_string(value);
     netList.push_back(netRow);
   }
 }
@@ -42,7 +37,7 @@ void Network::AddResistor(std::string name,
                           int node2,
                           double resistance)
 {
-  components.push_back(new Resistor(name, node1, node2, resistance));
+  components.push_back(std::make_unique<Resistor>(name, node1, node2, resistance));
 }
 
 void Network::AddVoltageSource(std::string name,

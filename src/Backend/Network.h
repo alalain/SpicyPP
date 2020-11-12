@@ -8,12 +8,14 @@
 #ifndef BACKEND_NETWORK_H_
 #define BACKEND_NETWORK_H_
 
-#include <map>
-#include <vector>
-#include <string>
-
 #include "Matrix.h"
 #include "Component.h"
+
+#include <map>
+#include <vector>
+#include <memory>
+#include <string>
+
 
 struct MeasureVal {
     std::string name;
@@ -27,7 +29,7 @@ struct MeasureVal {
 class Network
 {
   private:
-    std::vector<Component*> components;
+    std::vector<std::unique_ptr<Component>> components;
 
     Matrix netMatrix = Matrix(0,0);
     Matrix netVector = Matrix(0,0);
@@ -38,8 +40,6 @@ class Network
     void GenerateNetList();
 
   public:
-    Network(){}
-    ~Network();
     void AddResistor(std::string name, int node1, int node2, double resistance);
     void AddVoltageSource(std::string name, int node1, int node2, double voltage);
 

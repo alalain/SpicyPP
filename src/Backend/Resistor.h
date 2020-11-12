@@ -8,9 +8,11 @@
 #ifndef BACKEND_RESISTOR_H_
 #define BACKEND_RESISTOR_H_
 
-#include <string>
 #include "Matrix.h"
+#include "Network.h"
 #include "Component.h"
+
+#include <string>
 
 class Resistor: public Component
 {
@@ -20,7 +22,7 @@ class Resistor: public Component
   public:
     Resistor(std::string name, int node1, int node2, double resistance):
       Component(name, node1, node2), resistance(resistance){}
-    void AddtoMatrix(Matrix& netMatrix, Matrix& netVector) const override;
+    void AddtoMatrix(Network& network) const override;
     std::vector<double> GetValues() const override;
 };
 

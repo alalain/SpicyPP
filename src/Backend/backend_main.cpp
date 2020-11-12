@@ -1,11 +1,11 @@
 //Only for testing functions
 
+#include "Matrix.h"
+#include "Network.h"
+
 #include <iostream>
 #include <string>
 #include <vector>
-
-#include "Matrix.h"
-#include "Network.h"
 
 using namespace std;
 

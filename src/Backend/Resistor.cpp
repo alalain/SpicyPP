@@ -5,13 +5,13 @@
  *      Author: user
  */
 
-#include <vector>
-
 #include "Resistor.h"
+
+#include <vector>
 
 using namespace std;
 
-void Resistor::AddtoMatrix(Matrix& netMatrix, Matrix& netVector) const {
+void Resistor::AddtoMatrix(Network& network) const {
 
 }
 
