@@ -25,12 +25,13 @@ class Matrix
     bool hasError() const; //if rows or columns <= 0;
 
     void setValue(double value, int row = 0, int column = 0);
-    void setValues(std::vector<double> values, int rowStart = 0, int columnStart = 0);
-    void setValueColumn(std::vector<double> values, int column);
-    void setValueRow(std::vector<double> values, int row);
+    void setValues(std::vector<double> inputValues, int rowStart = 0, int columnStart = 0);
+    void setValueColumn(std::vector<double> inputValues, int column, double fillValue);
+    void setValueColumn(std::vector<double> inputValues, int column);
+    void setValueRow(std::vector<double> inputValues, int row);
 
     Matrix getInverse() const;
-    friend Matrix operator*(Matrix& left, Matrix& right);
+    friend Matrix operator*(const Matrix& left, const Matrix& right);
     friend bool operator==(Matrix& left, Matrix& right);
 
     //TODO Only for test

@@ -6,6 +6,7 @@
  */
 
 #include "Matrix.h"
+#include <stdexcept>
 
 using namespace std;
 
@@ -15,8 +16,9 @@ int main(){
   Matrix m1 = Matrix(2,2,v);
   m1.MatrixShow();
   Matrix m2 = Matrix(2,3);
-  m2.setValue(2.0, -1,2);
+  m2.setValue(2.0, 1,2);
   m2.MatrixShow();
+
   return 0;
 }
 
@@ -88,8 +90,16 @@ void Matrix::setValue(double value, int row, int column)
   values[row-1][column-1] = value;
 }
 
-
-/*friend Matrix operator*(Matrix& left, Matrix& right)
+void Matrix::setValueColumn(std::vector<double> inputValues, int column)
 {
+  int sizeOfInputValues = inputValues.size();
+    int sizeOfValues = values.size();
 
-} */
+    for(int i = 1; i <= sizeOfValues; ++i)
+    {
+      if(i <= sizeOfInputValues)
+      {
+        setValue(inputValues[i-1], i, column);
+      }
+    }
+}
