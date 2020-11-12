@@ -1,0 +1,27 @@
+\hypertarget{Matrix_8cpp}{}\section{/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\+Matrix.cpp File Reference}
+\label{Matrix_8cpp}\index{/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\+Matrix.\+cpp@{/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\+Matrix.\+cpp}}
+{\ttfamily \#include \char`\"{}Matrix.\+h\char`\"{}}\newline
+Include dependency graph for Matrix.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{Matrix_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\item 
+\hyperlink{classMatrix}{Matrix} \hyperlink{Matrix_8cpp_a0bf2b4d7bd64bbadd752705d2dbabd37}{get\+Inverse} (\hyperlink{classMatrix}{Matrix} \&A)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Matrix_8cpp_a0bf2b4d7bd64bbadd752705d2dbabd37}\label{Matrix_8cpp_a0bf2b4d7bd64bbadd752705d2dbabd37}} 
+\index{Matrix.\+cpp@{Matrix.\+cpp}!get\+Inverse@{get\+Inverse}}
+\index{get\+Inverse@{get\+Inverse}!Matrix.\+cpp@{Matrix.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Inverse()}{getInverse()}}
+{\footnotesize\ttfamily \hyperlink{classMatrix}{Matrix} get\+Inverse (\begin{DoxyParamCaption}\item[{\hyperlink{classMatrix}{Matrix} \&}]{A }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Matrix_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Matrix_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Matrix.\+cpp@{Matrix.\+cpp}!main@{main}}
+\index{main@{main}!Matrix.\+cpp@{Matrix.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
