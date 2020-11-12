@@ -92,3 +92,21 @@ void Matrix::setValueColumn(std::vector<double> inputValues, int column)
       }
     }
 }
+
+void Matrix::setValueColumn(std::vector<double> inputValues, int column, double fillValue)
+{
+  int sizeOfInputValues = inputValues.size();
+  int sizeOfValues = values.size();
+
+  for(int i = 1; i <= sizeOfValues; ++i)
+  {
+    if(i <= sizeOfInputValues)
+    {
+      setValue(inputValues[i-1], i, column);
+    }
+    else
+    {
+      setValue(fillValue ,i, column);
+    }
+  }
+}
