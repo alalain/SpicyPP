@@ -21,6 +21,7 @@ class Matrix
     void setValues(std::vector<double> inputValues, int rowStart = 0, int columnStart = 0);
     void setValueColumn(std::vector<double> inputValues, int column, double fillValue);
     void setValueColumn(std::vector<double> inputValues, int column);
+    void setValueRow(std::vector<double> inputValues, int row, double fillValue);
     void setValueRow(std::vector<double> inputValues, int row);
 
     /**

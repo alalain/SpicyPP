@@ -110,3 +110,36 @@ void Matrix::setValueColumn(std::vector<double> inputValues, int column, double 
     }
   }
 }
+
+void Matrix::setValueRow(std::vector<double> inputValues, int row)
+{
+  int sizeOfInputValues = inputValues.size();
+    int sizeOfValues = values.size();
+
+    for(int i = 1; i <= sizeOfValues; ++i)
+    {
+      if(i <= sizeOfInputValues)
+      {
+        setValue(inputValues[i-1], i, row);
+      }
+    }
+}
+
+void Matrix::setValueRow(std::vector<double> inputValues, int row, double fillValue)
+{
+  int sizeOfInputValues = inputValues.size();
+  int sizeOfValues = values.size();
+
+  for(int i = 1; i <= sizeOfValues; ++i)
+  {
+    if(i <= sizeOfInputValues)
+    {
+      setValue(inputValues[i-1], i, row);
+    }
+    else
+    {
+      setValue(fillValue ,i, row);
+    }
+  }
+}
+
