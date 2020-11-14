@@ -143,3 +143,27 @@ void Matrix::setValueRow(std::vector<double> inputValues, int row, double fillVa
   }
 }
 
+Matrix operator*(const Matrix& left, const Matrix& right)
+{
+  if(left.values[0].size() == right.values.size())
+  {
+    Matrix matrixProduct = Matrix(left.values.size(), right.values[0].size());
+    for(unsigned int r = 1; r <= matrixProduct.values.size(); ++r)
+    {
+      for(unsigned int c = 1; c <= matrixProduct.values[0].size(); ++c)
+      {
+        for(unsigned int elementIndex = 1; elementIndex <= left.values.size(); ++elementIndex)
+        {
+          matrixProduct.setValue(left.values[r-1][elementIndex-1]*right.values[elementIndex-1][c-1] + matrixProduct.values[r-1][c-1], r, c);
+        }
+      }
+    }
+    return matrixProduct;
+  }
+  else
+  {
+    throw range_error("Incorrect dimension for matrix multiplication");
+  }
+}
+
+
