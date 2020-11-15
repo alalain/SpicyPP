@@ -1,0 +1,35 @@
+To get the project running on the QT editor on the Emb\+Sw ubuntu VM please read the following instructions. \subsection*{1. C\+Make}
+
+For QT to run Cmake, it must know its installation. To ensure this go to Tools -\/$>$ Options -\/$>$ Kits -\/$>$ Cmake. It should look like this 
+
+\subsection*{2. New Kit}
+
+Now we want to make an new kit because compilation fails with QT\textquotesingle{}s own kit. Go to tab Kits -\/$>$ Add put in the following configurations\+: 
+
+\subsection*{3. Import project}
+
+To import project, go to File-\/$>$Open File or Project and select the C\+Make\+Lits.\+txt file in the repository. In the following window select the newly created Kit as Kit for the Project. 
+
+\subsection*{Programming with C\+Make}
+
+Since the Editor doesnn\textquotesingle{}t add new files automatically to the C\+Make\+List you must do it manually. If you add a .cpp or .ui file in the src add the file to the \char`\"{}add\+\_\+executable\char`\"{} list. If the File is part of th backend, add its path to add\+\_\+library after Static. The corresponding headerfile of a cpp file mustn\textquotesingle{}t be added. 
+\begin{DoxyCode}
+add\_library(matrix STATIC src/Backend/Matrix.cpp)
+add\_executable(spicy src/SpicyPP.cpp
+                     src/MainWindow.cpp
+                     src/MainWindow.ui)
+\end{DoxyCode}
+ Adding foo.\+cpp/h in src, and bar.\+cpp/h in src/backend\+: 
+\begin{DoxyCode}
+add\_library(matrix STATIC src/Backend/Matrix.cpp
+                          src/Backend/bar.cpp)
+add\_executable(spicy src/SpicyPP.cpp
+                     src/MainWindow.cpp
+                     src/MainWindow.ui
+                     src/foo.cpp)
+\end{DoxyCode}
+
+
+\subsection*{Debug config}
+
+To enable debug. Add the following value to the marked place\+:  

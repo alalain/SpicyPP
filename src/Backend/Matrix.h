@@ -1,10 +1,3 @@
-/*
- * Matrix.h
- *
- *  Created on: Nov 4, 2020
- *      Author: Marius Baumann
- */
-
 #ifndef BACKEND_MATRIX_H_
 #define BACKEND_MATRIX_H_
 
@@ -25,12 +18,24 @@ class Matrix
     bool hasError() const; //if rows or columns <= 0;
 
     void setValue(double value, int row = 0, int column = 0);
-    void setValues(std::vector<double> values, int rowStart = 0, int columnStart = 0);
-    void setValueColumn(std::vector<double> values, int column);
-    void setValueRow(std::vector<double> values, int row);
+    void setValues(std::vector<double> inputValues, int rowStart = 0, int columnStart = 0);
+    void setValueColumn(std::vector<double> inputValues, int column, double fillValue);
+    void setValueColumn(std::vector<double> inputValues, int column);
+    void setValueRow(std::vector<double> inputValues, int row, double fillValue);
+    void setValueRow(std::vector<double> inputValues, int row);
 
+    /**
+       * A pure virtual member.
+       * @return inverted Matrix
+     */
     Matrix getInverse() const;
-    friend Matrix operator*(Matrix& left, Matrix& right);
+    /**
+     * Multiplying left with right Matrix. Watch out for Order and dimensions of params.
+     * @param left: Matrix with dimensions a*N
+     * @param right: Matrix with dimensions N*b
+     * @return New Multiplied Matrix
+     */
+    friend Matrix operator*(const Matrix& left, const Matrix& right);
     friend bool operator==(Matrix& left, Matrix& right);
 
     //TODO Only for test

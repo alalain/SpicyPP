@@ -9,7 +9,8 @@
 
 using namespace std;
 
-// Backend main/*
+// Backend main
+/*
 int main(){
   vector<double> v = {1.0,2.0,3.0, 3.0, 5.0, 6.0, 7.0, 8.0, 4.0};
   Matrix m1 = Matrix(2,2,v);
@@ -24,7 +25,7 @@ int main(){
 
   return 0;
 }
-
+*/
 Matrix::Matrix(int rows, int columns, vector<double> values)
 {
   this->values = vector<vector<double>>();
@@ -88,6 +89,8 @@ Matrix Matrix::getInverse() const
 			cout<< "Pivot Teilung"<<endl;
 			bigmatrix.MatrixShow();
 
+
+
 			for(rreduce = 0; rreduce < rows; rreduce++) {
 			  if(rreduce != row){
 
@@ -106,8 +109,7 @@ Matrix Matrix::getInverse() const
 		}
 		else{		// shit pivot was 0 ???
 
-		  cout << "fuck pivot was zero" <<endl;
-		  return result;
+		  throw range_error("Inverse doesn't exist because the Matrix is singular");
 		}
 	}
 

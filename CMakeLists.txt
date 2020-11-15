@@ -18,7 +18,9 @@ else()
 endif()
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
-add_library(matrix STATIC src/Backend/Matrix.cpp)
+add_library(matrix STATIC src/Backend/Matrix.cpp
+                          src/Backend/Network.cpp
+                          src/Backend/Resistor.cpp)
 add_executable(spicy src/Frontend/SpicyPP.cpp
                      src/Frontend/MainWindow.cpp
                      src/Frontend/MainWindow.ui)
