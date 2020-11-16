@@ -58,9 +58,9 @@ Matrix Matrix::getInverse() const
       }
   }
 
-//TODO delet after tested
-cout<< "Einheitsvektor"<<endl;
-bigmatrix.MatrixShow();
+////TODO delet after tested
+//cout<< "Einheitsvektor"<<endl;
+//bigmatrix.MatrixShow();
 
   for(int row = 0; row < rows; row++) {
     if( bigmatrix.values[row][row] != 0){
@@ -70,9 +70,9 @@ bigmatrix.MatrixShow();
         bigmatrix.values[row][colum] = bigmatrix.values[row][colum]/pivot[row];  // pivot should not be zero
       }
 
-//TODO delet after tested
-cout<< "Pivot Teilung"<<endl;
-bigmatrix.MatrixShow();
+////TODO delet after tested
+//cout<< "Pivot Teilung"<<endl;
+//bigmatrix.MatrixShow();
 
       for(rreduce = 0; rreduce < rows; rreduce++) {
         if(rreduce != row){
@@ -84,9 +84,9 @@ bigmatrix.MatrixShow();
         }
       }
 
-//TODO delet after tested
-cout<< "Reihen reduzierung"<<endl;
-bigmatrix.MatrixShow();
+////TODO delet after tested
+//cout<< "Reihen reduzierung"<<endl;
+//bigmatrix.MatrixShow();
     }
     else{   // shit pivot was 0 ???
       throw range_error("Inverse doesn't exist because the Matrix is singular");
