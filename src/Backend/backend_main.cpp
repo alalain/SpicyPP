@@ -21,6 +21,14 @@ int main()
   cout << "NetList:" << endl;
   for(unsigned int i = 0; i < netList.size(); ++i)
     cout << netList[i] << endl;
+
+  vector<double> v;
+  for (int i = 1; i <= 8; i++)
+          v.push_back(i+1);
+  Matrix m1(3,3,v);
+  m1 = m1.getInverse();
+  m1.MatrixShow();
+
   return 0;
 }
 
