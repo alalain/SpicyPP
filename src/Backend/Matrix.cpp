@@ -34,7 +34,7 @@ Matrix::Matrix(int rows, int columns, vector<double> values)
 
 Matrix Matrix::getInverse() const
 {
-  double pivot[values.size()] = {};
+  double* pivot = new double[values.size()]{0};
 
   int rows = values.size();
   int colums = values[0].size();  // 1. Row because every Colum have equal size.
@@ -89,10 +89,11 @@ Matrix Matrix::getInverse() const
 //bigmatrix.MatrixShow();
     }
     else{   // shit pivot was 0 ???
+      delete [] pivot;
       throw range_error("Inverse doesn't exist because the Matrix is singular");
     }
   }
-
+  delete [] pivot;
   for (int i=0; i< rows; i++){
     for(int j=0; j<colums; j++){
       result.values[i][j]=bigmatrix.values[i][j+colums];
