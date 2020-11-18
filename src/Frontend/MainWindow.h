@@ -4,6 +4,8 @@
 #include <QDoubleValidator>
 #include <QIntValidator>
 #include <QMainWindow>
+#include <string>
+#include "./../Backend/Network.h"
 namespace Ui
 {
 class MainWindow;
@@ -24,6 +26,7 @@ class MainWindow : public QMainWindow
   QDoubleValidator* valueValidator;
   QIntValidator* componentValidator;
 
+  Network network;
   void onReset();
   void onAdd();
 };
