@@ -2,6 +2,7 @@
 #define BACKEND_MATRIX_H_
 
 #include <iostream> //TODO wont be needed in final version
+#include <iomanip>  //     Same
 #include <vector>
 
 class Matrix
@@ -46,7 +47,7 @@ class Matrix
       for(unsigned int i = 0; i < values.size(); i++)
       {
         for(unsigned int j = 0; j < values[i].size(); j++){
-          cout << values[i][j] << " ";
+          cout << std::fixed << std::setw(6) << std::setprecision(3) << values[i][j] << ", ";
         }
         cout << endl;
       }

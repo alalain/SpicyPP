@@ -30,6 +30,11 @@ Matrix::Matrix(int rows, int columns, vector<double> values)
   }
 }
 
+double Matrix::getValue(int row, int column) const {
+  if(row <= 0 || row > values.size() || column <= 0 || column > values[0].size())
+      return 0.0;
+  return values[row-1][column-1];
+}
 
 Matrix getInverse(Matrix& A)
 {
