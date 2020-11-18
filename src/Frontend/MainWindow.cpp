@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget* parent)
 {
   ui->setupUi(this);
 
-  connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::onReset);
+  // connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::onReset);
 }
 
 MainWindow::~MainWindow()
@@ -16,5 +16,5 @@ MainWindow::~MainWindow()
 
 void MainWindow::onReset()
 {
-  ui->label->setText("De Marius cheggt nüüt");
+  // ui->label->setText("De Marius cheggt nüüt");
 }
