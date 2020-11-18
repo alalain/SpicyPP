@@ -22,7 +22,7 @@ class Resistor: public Component
   public:
     Resistor(std::string name, int node1, int node2, double resistance):
       Component(name, node1, node2), resistance(resistance){}
-    void AddtoMatrix(Network& network) const override;
+    void AddFootprinttoMatrix(Network& network) const override;
     std::vector<double> GetValues() const override;
 };
 
