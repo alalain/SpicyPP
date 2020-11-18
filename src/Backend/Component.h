@@ -18,8 +18,8 @@ class Component
     virtual ~Component() = default;
     std::string GetName() const {return name;}
     int GetNode1() const {return node1;}
-    int GetNode2() const {return node1;}
-    virtual void AddtoMatrix(class Network& network) const = 0;
+    int GetNode2() const {return node2;}
+    virtual void AddFootprinttoMatrix(class Network& network) const = 0;
     virtual std::vector<double> GetValues() const = 0;
 };
 
