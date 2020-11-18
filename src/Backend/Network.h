@@ -11,8 +11,8 @@
 #include "Matrix.h"
 #include "Component.h"
 
-#include <map>
 #include <vector>
+#include <set>
 #include <memory>
 #include <string>
 
@@ -33,18 +33,21 @@ class Network
 
     Matrix netMatrix = Matrix(0,0);
     Matrix netVector = Matrix(0,0);
-
+    std::set<int> nodes = std::set<int>();
     std::vector<std::string> netList;
 
     void GenerateMatrixAndVector();
     void GenerateNetList();
 
   public:
+    Matrix& GetCurrentNetMatrix() { return netMatrix; }
+    Matrix& GetCurrentNetVector() { return netVector; }
+    const std::set<int>& GetCurrentNodeSet(){return nodes; }
+    std::vector<std::string> GetNewestNetlist();
+    std::vector<MeasureVal> GetNewestSolution();
+
     void AddResistor(std::string name, int node1, int node2, double resistance);
     void AddVoltageSource(std::string name, int node1, int node2, double voltage);
-
-    std::vector<std::string> GetNetlist();
-    std::vector<MeasureVal>GetSolution();
 };
 
 #endif /* BACKEND_NETWORK_H_ */

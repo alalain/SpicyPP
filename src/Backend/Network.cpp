@@ -10,11 +10,31 @@
 
 #include <string>
 #include <vector>
+#include <set>
 
 using namespace std;
 
 void Network::GenerateMatrixAndVector()
 {
+  //Resize Matrix
+  int newDimensions = 0;
+  nodes.clear();
+  nodes.insert(0); //Zero has to be in Set (for distancecalculations)
+  //Count nodes => how many Voltage dimensions added
+  for(const std::unique_ptr<Component>& component : components){
+    nodes.insert(component->GetNode1());
+    nodes.insert(component->GetNode2());
+  }
+  newDimensions += nodes.size() - 1; //size without zero node
+
+  //TODO Count sources with currents that have to be added to netMatrix
+
+  netMatrix = Matrix(newDimensions  , newDimensions);
+  netVector = Matrix(            1  , newDimensions);
+
+  for(const std::unique_ptr<Component>& component : components){
+    component->AddFootprinttoMatrix(*this);
+  }
 }
 
 void Network::GenerateNetList()
@@ -47,13 +67,13 @@ void Network::AddVoltageSource(std::string name,
 {
 }
 
-std::vector<std::string> Network::GetNetlist()
+std::vector<std::string> Network::GetNewestNetlist()
 {
   GenerateNetList();
   return netList;
 }
 
-std::vector<MeasureVal> Network::GetSolution()
+std::vector<MeasureVal> Network::GetNewestSolution()
 {
   GenerateMatrixAndVector();
   //Matrix solutionVector = netMatrix.getInverse() * netVector;
