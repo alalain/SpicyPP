@@ -67,13 +67,31 @@ void MainWindow::onAdd()
   int node1 = node1String.toInt();
   int node2 = node2String.toInt();
   std::string name = nameString.toStdString();
-
+  QString ListText = "";
   if (componentIndex == 0)
   {
+    ListText.append(nameString)
+        .append(": ")
+        .append(valueString)
+        .append("Ohm ")
+        .append(node1String)
+        .append(" ")
+        .append(node2String);
+    QListWidgetItem item(ListText);
+    ui->CompList->addItem(ListText);
     network.AddResistor(name, node1, node2, value);
   }
   else if (componentIndex == 1)
   {
+    ListText.append(nameString)
+        .append(": ")
+        .append(valueString)
+        .append("Volt ")
+        .append(node1String)
+        .append(" ")
+        .append(node2String);
+    QListWidgetItem item(ListText);
+    ui->CompList->addItem(ListText);
     network.AddVoltageSource(name, node1, node2, value);
   }
 }
