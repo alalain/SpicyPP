@@ -25,14 +25,14 @@ add_executable(spicy src/Frontend/SpicyPP.cpp
                      src/Frontend/MainWindow.cpp
                      src/Frontend/MainWindow.ui)
 
-#if ("$CMAKE_BUILD_TYPE" STREQUAL "Debug")
+if (UNIX)
   enable_testing()
   find_package(GTest REQUIRED)
   include(GoogleTest)
   add_executable(tests src/Backend/Matrix_test.cpp)
   target_link_libraries(tests matrix GTest::GTest GTest::Main)
   gtest_discover_tests(tests)
-#endif()
+endif()
 
 target_link_libraries(spicy LINK_PUBLIC matrix Qt5::Widgets)
 

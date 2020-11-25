@@ -410,10 +410,10 @@
 				<pathentry kind="mac" name="__GLIBCXX_TYPE_INT_N_0" path="" value="__int128"/>
 				<pathentry kind="mac" name="__GLIBCXX_BITSIZE_INT_N_0" path="" value="128"/>
 				<pathentry kind="mac" name="_GNU_SOURCE" path="" value="1"/>
-				<pathentry include="/home/user/Documents/pmsweng/SpicyPP/tests_autogen/include" kind="inc" path="" system="true"/>
+				<pathentry include="/home/user/Documents/SpicyPP/SpicyPP/tests_autogen/include" kind="inc" path="" system="true"/>
 				<pathentry include="/usr/local/include" kind="inc" path="" system="true"/>
-				<pathentry include="/home/user/Documents/pmsweng/SpicyPP/matrix_autogen/include" kind="inc" path="" system="true"/>
-				<pathentry include="/home/user/Documents/pmsweng/SpicyPP/spicy_autogen/include" kind="inc" path="" system="true"/>
+				<pathentry include="/home/user/Documents/SpicyPP/SpicyPP/matrix_autogen/include" kind="inc" path="" system="true"/>
+				<pathentry include="/home/user/Documents/SpicyPP/SpicyPP/spicy_autogen/include" kind="inc" path="" system="true"/>
 				<pathentry include="/opt/qt/5.12.4/gcc_64/include" kind="inc" path="" system="true"/>
 				<pathentry include="/opt/qt/5.12.4/gcc_64/include/QtWidgets" kind="inc" path="" system="true"/>
 				<pathentry include="/opt/qt/5.12.4/gcc_64/include/QtGui" kind="inc" path="" system="true"/>
@@ -431,140 +431,140 @@
 				<buildTargets>
 					<target name=": rebuild_cache" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments></buildArguments>
+						<buildArguments>-j2</buildArguments>
 						<buildTarget>rebuild_cache</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name="[exe] tests" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments></buildArguments>
+						<buildArguments>-j2</buildArguments>
 						<buildTarget>tests</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name="[exe] tests/fast" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments></buildArguments>
+						<buildArguments>-j2</buildArguments>
 						<buildTarget>tests/fast</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name="Build" path="[Targets]/[exe] tests" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments>-C "/home/user/Documents/pmsweng/SpicyPP" </buildArguments>
+						<buildArguments>-C "/home/user/Documents/SpicyPP/SpicyPP" -j2</buildArguments>
 						<buildTarget>tests</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name="Clean" path="[Targets]/[exe] tests" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/cmake</buildCommand>
-						<buildArguments>-E chdir "/home/user/Documents/pmsweng/SpicyPP" "/usr/bin/cmake" -P "CMakeFiles/tests.dir/cmake_clean.cmake"</buildArguments>
+						<buildArguments>-E chdir "/home/user/Documents/SpicyPP/SpicyPP" "/usr/bin/cmake" -P "CMakeFiles/tests.dir/cmake_clean.cmake"</buildArguments>
 						<buildTarget></buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name=": edit_cache" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments></buildArguments>
+						<buildArguments>-j2</buildArguments>
 						<buildTarget>edit_cache</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name="[lib] matrix" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments></buildArguments>
+						<buildArguments>-j2</buildArguments>
 						<buildTarget>matrix</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name="[lib] matrix/fast" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments></buildArguments>
+						<buildArguments>-j2</buildArguments>
 						<buildTarget>matrix/fast</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name="Build" path="[Targets]/[lib] matrix" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments>-C "/home/user/Documents/pmsweng/SpicyPP" </buildArguments>
+						<buildArguments>-C "/home/user/Documents/SpicyPP/SpicyPP" -j2</buildArguments>
 						<buildTarget>matrix</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name="Clean" path="[Targets]/[lib] matrix" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/cmake</buildCommand>
-						<buildArguments>-E chdir "/home/user/Documents/pmsweng/SpicyPP" "/usr/bin/cmake" -P "CMakeFiles/matrix.dir/cmake_clean.cmake"</buildArguments>
+						<buildArguments>-E chdir "/home/user/Documents/SpicyPP/SpicyPP" "/usr/bin/cmake" -P "CMakeFiles/matrix.dir/cmake_clean.cmake"</buildArguments>
 						<buildTarget></buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name=": test" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments></buildArguments>
+						<buildArguments>-j2</buildArguments>
 						<buildTarget>test</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name="[exe] spicy" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments></buildArguments>
+						<buildArguments>-j2</buildArguments>
 						<buildTarget>spicy</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name="[exe] spicy/fast" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments></buildArguments>
+						<buildArguments>-j2</buildArguments>
 						<buildTarget>spicy/fast</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name="Build" path="[Targets]/[exe] spicy" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments>-C "/home/user/Documents/pmsweng/SpicyPP" </buildArguments>
+						<buildArguments>-C "/home/user/Documents/SpicyPP/SpicyPP" -j2</buildArguments>
 						<buildTarget>spicy</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name="Clean" path="[Targets]/[exe] spicy" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/cmake</buildCommand>
-						<buildArguments>-E chdir "/home/user/Documents/pmsweng/SpicyPP" "/usr/bin/cmake" -P "CMakeFiles/spicy.dir/cmake_clean.cmake"</buildArguments>
+						<buildArguments>-E chdir "/home/user/Documents/SpicyPP/SpicyPP" "/usr/bin/cmake" -P "CMakeFiles/spicy.dir/cmake_clean.cmake"</buildArguments>
 						<buildTarget></buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name=": tests_autogen" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments></buildArguments>
+						<buildArguments>-j2</buildArguments>
 						<buildTarget>tests_autogen</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name=": matrix_autogen" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments></buildArguments>
+						<buildArguments>-j2</buildArguments>
 						<buildTarget>matrix_autogen</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name=": spicy_autogen" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments></buildArguments>
+						<buildArguments>-j2</buildArguments>
 						<buildTarget>spicy_autogen</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name=": all" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments></buildArguments>
+						<buildArguments>-j2</buildArguments>
 						<buildTarget>all</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>
 					</target>
 					<target name=": clean" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>/usr/bin/make</buildCommand>
-						<buildArguments></buildArguments>
+						<buildArguments>-j2</buildArguments>
 						<buildTarget>clean</buildTarget>
 						<stopOnError>true</stopOnError>
 						<useDefaultCommand>false</useDefaultCommand>

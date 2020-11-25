@@ -23,7 +23,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.build.arguments</key>
-					<value></value>
+					<value>-j2</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.build.command</key>
@@ -31,7 +31,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.build.location</key>
-					<value>/home/user/Documents/pmsweng/SpicyPP</value>
+					<value>/home/user/Documents/SpicyPP/SpicyPP</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.build.target.auto</key>
@@ -51,7 +51,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.buildLocation</key>
-					<value>/home/user/Documents/pmsweng/SpicyPP</value>
+					<value>/home/user/Documents/SpicyPP/SpicyPP</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.cleanBuildTarget</key>
@@ -146,7 +146,7 @@
 		<link>
 			<name>[Targets]/[exe] spicy/MainWindow.ui</name>
 			<type>1</type>
-			<location>/home/user/Documents/pmsweng/SpicyPP/src/Frontend/MainWindow.ui</location>
+			<location>/home/user/Documents/SpicyPP/SpicyPP/src/Frontend/MainWindow.ui</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] spicy/Object Files</name>
@@ -231,47 +231,47 @@
 		<link>
 			<name>[Targets]/[exe] spicy/Source Files/MainWindow.cpp</name>
 			<type>1</type>
-			<location>/home/user/Documents/pmsweng/SpicyPP/src/Frontend/MainWindow.cpp</location>
+			<location>/home/user/Documents/SpicyPP/SpicyPP/src/Frontend/MainWindow.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] spicy/Source Files/SpicyPP.cpp</name>
 			<type>1</type>
-			<location>/home/user/Documents/pmsweng/SpicyPP/src/Frontend/SpicyPP.cpp</location>
+			<location>/home/user/Documents/SpicyPP/SpicyPP/src/Frontend/SpicyPP.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] spicy/Source Files/mocs_compilation.cpp</name>
 			<type>1</type>
-			<location>/home/user/Documents/pmsweng/SpicyPP/spicy_autogen/mocs_compilation.cpp</location>
+			<location>/home/user/Documents/SpicyPP/SpicyPP/spicy_autogen/mocs_compilation.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] tests/Source Files/Matrix_test.cpp</name>
 			<type>1</type>
-			<location>/home/user/Documents/pmsweng/SpicyPP/src/Backend/Matrix_test.cpp</location>
+			<location>/home/user/Documents/SpicyPP/SpicyPP/src/Backend/Matrix_test.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[exe] tests/Source Files/mocs_compilation.cpp</name>
 			<type>1</type>
-			<location>/home/user/Documents/pmsweng/SpicyPP/tests_autogen/mocs_compilation.cpp</location>
+			<location>/home/user/Documents/SpicyPP/SpicyPP/tests_autogen/mocs_compilation.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[lib] matrix/Source Files/Matrix.cpp</name>
 			<type>1</type>
-			<location>/home/user/Documents/pmsweng/SpicyPP/src/Backend/Matrix.cpp</location>
+			<location>/home/user/Documents/SpicyPP/SpicyPP/src/Backend/Matrix.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[lib] matrix/Source Files/Network.cpp</name>
 			<type>1</type>
-			<location>/home/user/Documents/pmsweng/SpicyPP/src/Backend/Network.cpp</location>
+			<location>/home/user/Documents/SpicyPP/SpicyPP/src/Backend/Network.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[lib] matrix/Source Files/Resistor.cpp</name>
 			<type>1</type>
-			<location>/home/user/Documents/pmsweng/SpicyPP/src/Backend/Resistor.cpp</location>
+			<location>/home/user/Documents/SpicyPP/SpicyPP/src/Backend/Resistor.cpp</location>
 		</link>
 		<link>
 			<name>[Targets]/[lib] matrix/Source Files/mocs_compilation.cpp</name>
 			<type>1</type>
-			<location>/home/user/Documents/pmsweng/SpicyPP/matrix_autogen/mocs_compilation.cpp</location>
+			<location>/home/user/Documents/SpicyPP/SpicyPP/matrix_autogen/mocs_compilation.cpp</location>
 		</link>
 	</linkedResources>
 </projectDescription>
