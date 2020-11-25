@@ -33,3 +33,6 @@
 /Debug/
 
 *.user
+
+Makefile
+
