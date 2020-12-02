@@ -6,7 +6,9 @@
  */
 #include "Network.h"
 #include "Resistor.h"
+#include "VoltageSource.h"
 #include "Component.h"
+
 
 #include <string>
 #include <vector>
@@ -26,11 +28,12 @@ void Network::GenerateMatrixAndVector()
     nodes.insert(component->GetNode2());
   }
   newDimensions += nodes.size() - 1; //size without zero node
+  newDimensions += VoltageSource::getSourceCount();
 
   //TODO Count sources with currents that have to be added to netMatrix
 
   netMatrix = Matrix(newDimensions  , newDimensions);
-  netVector = Matrix(            1  , newDimensions);
+  netVector = Matrix(newDimensions  ,             1);
 
   for(const std::unique_ptr<Component>& component : components){
     component->AddFootprinttoMatrix(*this);
@@ -65,6 +68,7 @@ void Network::AddVoltageSource(std::string name,
                                int node2,
                                double voltage)
 {
+  components.push_back(std::make_unique<VoltageSource>(name, node1, node2, voltage));
 }
 
 std::vector<std::string> Network::GetNewestNetlist()
@@ -73,11 +77,13 @@ std::vector<std::string> Network::GetNewestNetlist()
   return netList;
 }
 
-std::vector<MeasureVal> Network::GetNewestSolution()
+void Network::GetNewestSolution(std::vector<MeasureVal>& storeVals)
 {
   GenerateMatrixAndVector();
-  //Matrix solutionVector = netMatrix.getInverse() * netVector;
-  //TODO which values which?
+  Matrix solutionVector = netMatrix.getInverse() * netVector;
 
-  return vector<MeasureVal>();
+  for(int i = 1; i < nodes.size(); ++i)
+  {
+    storeVals.push_back(MeasureVal("U" + to_string(i), solutionVector.getValue(i, 1), "V"));
+  }
 }

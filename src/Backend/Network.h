@@ -16,6 +16,7 @@
 #include <memory>
 #include <string>
 
+class Component;
 
 struct MeasureVal {
     std::string name;
@@ -44,7 +45,7 @@ class Network
     Matrix& GetCurrentNetVector() { return netVector; }
     const std::set<int>& GetCurrentNodeSet(){return nodes; }
     std::vector<std::string> GetNewestNetlist();
-    std::vector<MeasureVal> GetNewestSolution();
+    void GetNewestSolution(std::vector<MeasureVal>& storeVals);
 
     void AddResistor(std::string name, int node1, int node2, double resistance);
     void AddVoltageSource(std::string name, int node1, int node2, double voltage);
