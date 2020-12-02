@@ -2,6 +2,7 @@
 #define BACKEND_COMPONENT_H_
 
 #include "Matrix.h"
+#include "Network.h"
 
 #include <string>
 

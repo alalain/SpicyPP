@@ -9,10 +9,7 @@
 #define BACKEND_RESISTOR_H_
 
 #include "Matrix.h"
-#include "Network.h"
 #include "Component.h"
-
-#include <string>
 
 class Resistor: public Component
 {
