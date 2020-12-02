@@ -19,15 +19,11 @@ bool \hyperlink{classMatrix_abf6343d2b9345e08ef800fbc8f19e34e}{has\+Error} () co
 \item 
 void \hyperlink{classMatrix_a8271fe6ec51ea43fdf77f4b7f96333d9}{set\+Value} (double value, int row=0, int column=0)
 \item 
-void \hyperlink{classMatrix_a08f522fc56b7649a4242e7a0aefdfadd}{set\+Values} (std\+::vector$<$ double $>$ input\+Values, int row\+Start=0, int column\+Start=0)
+void \hyperlink{classMatrix_a14c65630cbfab56ef5a99c793cca3dba}{set\+Values} (std\+::vector$<$ double $>$ \hyperlink{classMatrix_a5987175ae045377790ff0b1f6cfd2e7b}{values}, int row\+Start=0, int column\+Start=0)
 \item 
-void \hyperlink{classMatrix_ae33b973c97f6deed0f5936975c148aed}{set\+Value\+Column} (std\+::vector$<$ double $>$ input\+Values, int column, double fill\+Value)
+void \hyperlink{classMatrix_a1c77e71a031b6f116b9dfa328f70009b}{set\+Value\+Column} (std\+::vector$<$ double $>$ \hyperlink{classMatrix_a5987175ae045377790ff0b1f6cfd2e7b}{values}, int column)
 \item 
-void \hyperlink{classMatrix_a9af4d3f38ba62a90d31467dd43f48ac1}{set\+Value\+Column} (std\+::vector$<$ double $>$ input\+Values, int column)
-\item 
-void \hyperlink{classMatrix_ae204cbbd2279c21e0e22fa2fbd1a71ca}{set\+Value\+Row} (std\+::vector$<$ double $>$ input\+Values, int row, double fill\+Value)
-\item 
-void \hyperlink{classMatrix_af331f831fa9f4b800a57280818477cb8}{set\+Value\+Row} (std\+::vector$<$ double $>$ input\+Values, int row)
+void \hyperlink{classMatrix_a0c70a6fc13e5b41d473bcdde7af1da11}{set\+Value\+Row} (std\+::vector$<$ double $>$ \hyperlink{classMatrix_a5987175ae045377790ff0b1f6cfd2e7b}{values}, int row)
 \item 
 \hyperlink{classMatrix}{Matrix} \hyperlink{classMatrix_ade3fcddb0cc6a7e221a94e13afc7752c}{get\+Inverse} () const
 \item 
@@ -41,7 +37,7 @@ std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \hyperlink{classMatrix_a5987175
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classMatrix}{Matrix} \hyperlink{classMatrix_a6b58c286243be002bf669704ad15353a}{operator$\ast$} (const \hyperlink{classMatrix}{Matrix} \&left, const \hyperlink{classMatrix}{Matrix} \&right)
+\hyperlink{classMatrix}{Matrix} \hyperlink{classMatrix_ac50600b8a22de241095a6d5fd075acc5}{operator$\ast$} (\hyperlink{classMatrix}{Matrix} \&left, \hyperlink{classMatrix}{Matrix} \&right)
 \item 
 bool \hyperlink{classMatrix_a9407333bda2f3bf7b8a7ca9bec61b8ce}{operator==} (\hyperlink{classMatrix}{Matrix} \&left, \hyperlink{classMatrix}{Matrix} \&right)
 \end{DoxyCompactItemize}
@@ -102,44 +98,32 @@ inverted \hyperlink{classMatrix}{Matrix}
 \subsubsection{\texorpdfstring{set\+Value()}{setValue()}}
 {\footnotesize\ttfamily void Matrix\+::set\+Value (\begin{DoxyParamCaption}\item[{double}]{value,  }\item[{int}]{row = {\ttfamily 0},  }\item[{int}]{column = {\ttfamily 0} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classMatrix_ae33b973c97f6deed0f5936975c148aed}\label{classMatrix_ae33b973c97f6deed0f5936975c148aed}} 
+\mbox{\Hypertarget{classMatrix_a1c77e71a031b6f116b9dfa328f70009b}\label{classMatrix_a1c77e71a031b6f116b9dfa328f70009b}} 
 \index{Matrix@{Matrix}!set\+Value\+Column@{set\+Value\+Column}}
 \index{set\+Value\+Column@{set\+Value\+Column}!Matrix@{Matrix}}
-\subsubsection{\texorpdfstring{set\+Value\+Column()}{setValueColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Matrix\+::set\+Value\+Column (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{input\+Values,  }\item[{int}]{column,  }\item[{double}]{fill\+Value }\end{DoxyParamCaption})}
+\subsubsection{\texorpdfstring{set\+Value\+Column()}{setValueColumn()}}
+{\footnotesize\ttfamily void Matrix\+::set\+Value\+Column (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{values,  }\item[{int}]{column }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classMatrix_a9af4d3f38ba62a90d31467dd43f48ac1}\label{classMatrix_a9af4d3f38ba62a90d31467dd43f48ac1}} 
-\index{Matrix@{Matrix}!set\+Value\+Column@{set\+Value\+Column}}
-\index{set\+Value\+Column@{set\+Value\+Column}!Matrix@{Matrix}}
-\subsubsection{\texorpdfstring{set\+Value\+Column()}{setValueColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Matrix\+::set\+Value\+Column (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{input\+Values,  }\item[{int}]{column }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classMatrix_ae204cbbd2279c21e0e22fa2fbd1a71ca}\label{classMatrix_ae204cbbd2279c21e0e22fa2fbd1a71ca}} 
+\mbox{\Hypertarget{classMatrix_a0c70a6fc13e5b41d473bcdde7af1da11}\label{classMatrix_a0c70a6fc13e5b41d473bcdde7af1da11}} 
 \index{Matrix@{Matrix}!set\+Value\+Row@{set\+Value\+Row}}
 \index{set\+Value\+Row@{set\+Value\+Row}!Matrix@{Matrix}}
-\subsubsection{\texorpdfstring{set\+Value\+Row()}{setValueRow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Matrix\+::set\+Value\+Row (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{input\+Values,  }\item[{int}]{row,  }\item[{double}]{fill\+Value }\end{DoxyParamCaption})}
+\subsubsection{\texorpdfstring{set\+Value\+Row()}{setValueRow()}}
+{\footnotesize\ttfamily void Matrix\+::set\+Value\+Row (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{values,  }\item[{int}]{row }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classMatrix_af331f831fa9f4b800a57280818477cb8}\label{classMatrix_af331f831fa9f4b800a57280818477cb8}} 
-\index{Matrix@{Matrix}!set\+Value\+Row@{set\+Value\+Row}}
-\index{set\+Value\+Row@{set\+Value\+Row}!Matrix@{Matrix}}
-\subsubsection{\texorpdfstring{set\+Value\+Row()}{setValueRow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Matrix\+::set\+Value\+Row (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{input\+Values,  }\item[{int}]{row }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{classMatrix_a08f522fc56b7649a4242e7a0aefdfadd}\label{classMatrix_a08f522fc56b7649a4242e7a0aefdfadd}} 
+\mbox{\Hypertarget{classMatrix_a14c65630cbfab56ef5a99c793cca3dba}\label{classMatrix_a14c65630cbfab56ef5a99c793cca3dba}} 
 \index{Matrix@{Matrix}!set\+Values@{set\+Values}}
 \index{set\+Values@{set\+Values}!Matrix@{Matrix}}
 \subsubsection{\texorpdfstring{set\+Values()}{setValues()}}
-{\footnotesize\ttfamily void Matrix\+::set\+Values (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{input\+Values,  }\item[{int}]{row\+Start = {\ttfamily 0},  }\item[{int}]{column\+Start = {\ttfamily 0} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Matrix\+::set\+Values (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{values,  }\item[{int}]{row\+Start = {\ttfamily 0},  }\item[{int}]{column\+Start = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 
 \subsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{classMatrix_a6b58c286243be002bf669704ad15353a}\label{classMatrix_a6b58c286243be002bf669704ad15353a}} 
+\mbox{\Hypertarget{classMatrix_ac50600b8a22de241095a6d5fd075acc5}\label{classMatrix_ac50600b8a22de241095a6d5fd075acc5}} 
 \index{Matrix@{Matrix}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!Matrix@{Matrix}}
 \subsubsection{\texorpdfstring{operator$\ast$}{operator*}}
-{\footnotesize\ttfamily \hyperlink{classMatrix}{Matrix} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classMatrix}{Matrix} \&}]{left,  }\item[{const \hyperlink{classMatrix}{Matrix} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+{\footnotesize\ttfamily \hyperlink{classMatrix}{Matrix} operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{classMatrix}{Matrix} \&}]{left,  }\item[{\hyperlink{classMatrix}{Matrix} \&}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 Multiplying left with right \hyperlink{classMatrix}{Matrix}. Watch out for Order and dimensions of params. 
 \begin{DoxyParams}{Parameters}

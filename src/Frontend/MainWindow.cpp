@@ -70,19 +70,28 @@ void MainWindow::onAdd()
   QString ListText = "";
   if (componentIndex == 0)
   {
+    ListText.append(nameString)
+        .append(": ")
+        .append(valueString)
+        .append("Ohm ")
+        .append(node1String)
+        .append(" ")
+        .append(node2String);
+    QListWidgetItem item(ListText);
+    ui->CompList->addItem(ListText);
     network.AddResistor(name, node1, node2, value);
   }
   else if (componentIndex == 1)
   {
+    ListText.append(nameString)
+        .append(": ")
+        .append(valueString)
+        .append("Volt ")
+        .append(node1String)
+        .append(" ")
+        .append(node2String);
+    QListWidgetItem item(ListText);
+    ui->CompList->addItem(ListText);
     network.AddVoltageSource(name, node1, node2, value);
   }
-
-  UpdateCompList();
-}
-
-void MainWindow::UpdateCompList()
-{
-  ui->CompList->clear();
-  for (std::string s : network.GetNewestNetlist())
-    ui->CompList->addItem(QString(s.data()));
 }

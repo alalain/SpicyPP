@@ -1,9 +1,0 @@
-/home/user/Documents/SpicyPP/CMakeFiles/rebuild_cache.dir
-/home/user/Documents/SpicyPP/CMakeFiles/tests.dir
-/home/user/Documents/SpicyPP/CMakeFiles/edit_cache.dir
-/home/user/Documents/SpicyPP/CMakeFiles/matrix.dir
-/home/user/Documents/SpicyPP/CMakeFiles/test.dir
-/home/user/Documents/SpicyPP/CMakeFiles/spicy.dir
-/home/user/Documents/SpicyPP/CMakeFiles/tests_autogen.dir
-/home/user/Documents/SpicyPP/CMakeFiles/matrix_autogen.dir
-/home/user/Documents/SpicyPP/CMakeFiles/spicy_autogen.dir

@@ -29,7 +29,6 @@ class MainWindow : public QMainWindow
   Network network;
   void onReset();
   void onAdd();
-  void UpdateCompList();
 };
 
 #endif  // MAINWINDOW_H

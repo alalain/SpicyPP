@@ -1,3 +1,0 @@
-MatrixTest.MatrixGetValues 4 0
----
-MatrixTest.MatrixGetValues
