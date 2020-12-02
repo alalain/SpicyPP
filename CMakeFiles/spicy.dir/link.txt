@@ -1,0 +1,1 @@
+/usr/bin/g++     CMakeFiles/spicy.dir/src/Backend/backend_main.cpp.o CMakeFiles/spicy.dir/spicy_autogen/mocs_compilation.cpp.o  -o spicy -Wl,-rpath,/opt/qt/5.12.4/gcc_64/lib libmatrix.a /opt/qt/5.12.4/gcc_64/lib/libQt5Widgets.so.5.12.4 /opt/qt/5.12.4/gcc_64/lib/libQt5Gui.so.5.12.4 /opt/qt/5.12.4/gcc_64/lib/libQt5Core.so.5.12.4 

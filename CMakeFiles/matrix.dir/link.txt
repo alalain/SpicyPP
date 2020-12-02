@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmatrix.a  CMakeFiles/matrix.dir/src/Backend/Matrix.cpp.o CMakeFiles/matrix.dir/src/Backend/Network.cpp.o CMakeFiles/matrix.dir/src/Backend/Resistor.cpp.o CMakeFiles/matrix.dir/src/Backend/VoltageSource.cpp.o CMakeFiles/matrix.dir/matrix_autogen/mocs_compilation.cpp.o
+/usr/bin/ranlib libmatrix.a

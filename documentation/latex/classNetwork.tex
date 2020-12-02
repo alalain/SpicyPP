@@ -1,0 +1,143 @@
+\hypertarget{classNetwork}{}\section{Network Class Reference}
+\label{classNetwork}\index{Network@{Network}}
+
+
+{\ttfamily \#include $<$Network.\+h$>$}
+
+
+
+Collaboration diagram for Network\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMatrix}{Matrix} \& \hyperlink{classNetwork_a0d542d208520c286e5418267525c183d}{Get\+Current\+Net\+Matrix} ()
+\item 
+\hyperlink{classMatrix}{Matrix} \& \hyperlink{classNetwork_a14a99e68dac334d31c127032b24cee0c}{Get\+Current\+Net\+Vector} ()
+\item 
+const std\+::set$<$ int $>$ \& \hyperlink{classNetwork_a355e3ef39f7178851cb230846d616cef}{Get\+Current\+Node\+Set} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classNetwork_addae3802a581406208810ce430a045f9}{Get\+Newest\+Netlist} ()
+\item 
+std\+::vector$<$ \hyperlink{structMeasureVal}{Measure\+Val} $>$ \hyperlink{classNetwork_ab22eeab7f44269316967f14c0ad7b063}{Get\+Newest\+Solution} ()
+\item 
+void \hyperlink{classNetwork_a110bd81c8a0ace8eca270ffd12cff58a}{Add\+Resistor} (std\+::string name, int node1, int node2, double resistance)
+\item 
+void \hyperlink{classNetwork_a28d48c202d27f3f319ef1a837ab05974}{Add\+Voltage\+Source} (std\+::string name, int node1, int node2, double voltage)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classNetwork_af68724676fb5a5e1fdba8b82b5f0d0e5}{Generate\+Matrix\+And\+Vector} ()
+\item 
+void \hyperlink{classNetwork_a783abf2a3cb51f088682796304a988ff}{Generate\+Net\+List} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classComponent}{Component} $>$ $>$ \hyperlink{classNetwork_a4ee230b842728a61f416cb5a64c5dfb9}{components}
+\item 
+\hyperlink{classMatrix}{Matrix} \hyperlink{classNetwork_ab23ee0b8d12c2002ab3f21fce276ebb6}{net\+Matrix} = \hyperlink{classMatrix}{Matrix}(0,0)
+\item 
+\hyperlink{classMatrix}{Matrix} \hyperlink{classNetwork_a93b7a4e3182a75be5181d2f909235654}{net\+Vector} = \hyperlink{classMatrix}{Matrix}(0,0)
+\item 
+std\+::set$<$ int $>$ \hyperlink{classNetwork_a0e6aeccbefae639a173ebf2d759b34e0}{nodes} = std\+::set$<$int$>$()
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classNetwork_aa053af925f59bade9a3aff425c232273}{net\+List}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNetwork_a110bd81c8a0ace8eca270ffd12cff58a}\label{classNetwork_a110bd81c8a0ace8eca270ffd12cff58a}} 
+\index{Network@{Network}!Add\+Resistor@{Add\+Resistor}}
+\index{Add\+Resistor@{Add\+Resistor}!Network@{Network}}
+\subsubsection{\texorpdfstring{Add\+Resistor()}{AddResistor()}}
+{\footnotesize\ttfamily void Network\+::\+Add\+Resistor (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{node1,  }\item[{int}]{node2,  }\item[{double}]{resistance }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classNetwork_a28d48c202d27f3f319ef1a837ab05974}\label{classNetwork_a28d48c202d27f3f319ef1a837ab05974}} 
+\index{Network@{Network}!Add\+Voltage\+Source@{Add\+Voltage\+Source}}
+\index{Add\+Voltage\+Source@{Add\+Voltage\+Source}!Network@{Network}}
+\subsubsection{\texorpdfstring{Add\+Voltage\+Source()}{AddVoltageSource()}}
+{\footnotesize\ttfamily void Network\+::\+Add\+Voltage\+Source (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{node1,  }\item[{int}]{node2,  }\item[{double}]{voltage }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classNetwork_af68724676fb5a5e1fdba8b82b5f0d0e5}\label{classNetwork_af68724676fb5a5e1fdba8b82b5f0d0e5}} 
+\index{Network@{Network}!Generate\+Matrix\+And\+Vector@{Generate\+Matrix\+And\+Vector}}
+\index{Generate\+Matrix\+And\+Vector@{Generate\+Matrix\+And\+Vector}!Network@{Network}}
+\subsubsection{\texorpdfstring{Generate\+Matrix\+And\+Vector()}{GenerateMatrixAndVector()}}
+{\footnotesize\ttfamily void Network\+::\+Generate\+Matrix\+And\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classNetwork_a783abf2a3cb51f088682796304a988ff}\label{classNetwork_a783abf2a3cb51f088682796304a988ff}} 
+\index{Network@{Network}!Generate\+Net\+List@{Generate\+Net\+List}}
+\index{Generate\+Net\+List@{Generate\+Net\+List}!Network@{Network}}
+\subsubsection{\texorpdfstring{Generate\+Net\+List()}{GenerateNetList()}}
+{\footnotesize\ttfamily void Network\+::\+Generate\+Net\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classNetwork_a0d542d208520c286e5418267525c183d}\label{classNetwork_a0d542d208520c286e5418267525c183d}} 
+\index{Network@{Network}!Get\+Current\+Net\+Matrix@{Get\+Current\+Net\+Matrix}}
+\index{Get\+Current\+Net\+Matrix@{Get\+Current\+Net\+Matrix}!Network@{Network}}
+\subsubsection{\texorpdfstring{Get\+Current\+Net\+Matrix()}{GetCurrentNetMatrix()}}
+{\footnotesize\ttfamily \hyperlink{classMatrix}{Matrix}\& Network\+::\+Get\+Current\+Net\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classNetwork_a14a99e68dac334d31c127032b24cee0c}\label{classNetwork_a14a99e68dac334d31c127032b24cee0c}} 
+\index{Network@{Network}!Get\+Current\+Net\+Vector@{Get\+Current\+Net\+Vector}}
+\index{Get\+Current\+Net\+Vector@{Get\+Current\+Net\+Vector}!Network@{Network}}
+\subsubsection{\texorpdfstring{Get\+Current\+Net\+Vector()}{GetCurrentNetVector()}}
+{\footnotesize\ttfamily \hyperlink{classMatrix}{Matrix}\& Network\+::\+Get\+Current\+Net\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classNetwork_a355e3ef39f7178851cb230846d616cef}\label{classNetwork_a355e3ef39f7178851cb230846d616cef}} 
+\index{Network@{Network}!Get\+Current\+Node\+Set@{Get\+Current\+Node\+Set}}
+\index{Get\+Current\+Node\+Set@{Get\+Current\+Node\+Set}!Network@{Network}}
+\subsubsection{\texorpdfstring{Get\+Current\+Node\+Set()}{GetCurrentNodeSet()}}
+{\footnotesize\ttfamily const std\+::set$<$int$>$\& Network\+::\+Get\+Current\+Node\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classNetwork_addae3802a581406208810ce430a045f9}\label{classNetwork_addae3802a581406208810ce430a045f9}} 
+\index{Network@{Network}!Get\+Newest\+Netlist@{Get\+Newest\+Netlist}}
+\index{Get\+Newest\+Netlist@{Get\+Newest\+Netlist}!Network@{Network}}
+\subsubsection{\texorpdfstring{Get\+Newest\+Netlist()}{GetNewestNetlist()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Network\+::\+Get\+Newest\+Netlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classNetwork_ab22eeab7f44269316967f14c0ad7b063}\label{classNetwork_ab22eeab7f44269316967f14c0ad7b063}} 
+\index{Network@{Network}!Get\+Newest\+Solution@{Get\+Newest\+Solution}}
+\index{Get\+Newest\+Solution@{Get\+Newest\+Solution}!Network@{Network}}
+\subsubsection{\texorpdfstring{Get\+Newest\+Solution()}{GetNewestSolution()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{structMeasureVal}{Measure\+Val} $>$ Network\+::\+Get\+Newest\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classNetwork_a4ee230b842728a61f416cb5a64c5dfb9}\label{classNetwork_a4ee230b842728a61f416cb5a64c5dfb9}} 
+\index{Network@{Network}!components@{components}}
+\index{components@{components}!Network@{Network}}
+\subsubsection{\texorpdfstring{components}{components}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\hyperlink{classComponent}{Component}$>$ $>$ Network\+::components\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classNetwork_aa053af925f59bade9a3aff425c232273}\label{classNetwork_aa053af925f59bade9a3aff425c232273}} 
+\index{Network@{Network}!net\+List@{net\+List}}
+\index{net\+List@{net\+List}!Network@{Network}}
+\subsubsection{\texorpdfstring{net\+List}{netList}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Network\+::net\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classNetwork_ab23ee0b8d12c2002ab3f21fce276ebb6}\label{classNetwork_ab23ee0b8d12c2002ab3f21fce276ebb6}} 
+\index{Network@{Network}!net\+Matrix@{net\+Matrix}}
+\index{net\+Matrix@{net\+Matrix}!Network@{Network}}
+\subsubsection{\texorpdfstring{net\+Matrix}{netMatrix}}
+{\footnotesize\ttfamily \hyperlink{classMatrix}{Matrix} Network\+::net\+Matrix = \hyperlink{classMatrix}{Matrix}(0,0)\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classNetwork_a93b7a4e3182a75be5181d2f909235654}\label{classNetwork_a93b7a4e3182a75be5181d2f909235654}} 
+\index{Network@{Network}!net\+Vector@{net\+Vector}}
+\index{net\+Vector@{net\+Vector}!Network@{Network}}
+\subsubsection{\texorpdfstring{net\+Vector}{netVector}}
+{\footnotesize\ttfamily \hyperlink{classMatrix}{Matrix} Network\+::net\+Vector = \hyperlink{classMatrix}{Matrix}(0,0)\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classNetwork_a0e6aeccbefae639a173ebf2d759b34e0}\label{classNetwork_a0e6aeccbefae639a173ebf2d759b34e0}} 
+\index{Network@{Network}!nodes@{nodes}}
+\index{nodes@{nodes}!Network@{Network}}
+\subsubsection{\texorpdfstring{nodes}{nodes}}
+{\footnotesize\ttfamily std\+::set$<$int$>$ Network\+::nodes = std\+::set$<$int$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\hyperlink{Network_8h}{Network.\+h}\item 
+/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\hyperlink{Network_8cpp}{Network.\+cpp}\end{DoxyCompactItemize}
