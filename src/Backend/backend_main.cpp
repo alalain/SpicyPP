@@ -14,9 +14,11 @@ using namespace std;
 int main()
 {
   Network net;
-  net.AddResistor("R1", 2, 1, 10);
-  net.AddResistor("R2", 1, 0, 15);
-  net.AddVoltageSource("V1", 2, 0, 10);
+  net.AddResistor("R5", 0, 2, 20);
+  net.AddResistor("R1", 2, 3, 10);
+  net.AddResistor("R2", 3, 5, 15);
+  net.AddVoltageSource("V7", 0, 2, 5);
+  net.AddVoltageSource("V1", 2, 5, 10);
 
   vector<string> netList = net.GetNewestNetlist();
   cout << "NetList:" << endl;

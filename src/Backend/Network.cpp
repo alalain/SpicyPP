@@ -81,9 +81,11 @@ void Network::GetNewestSolution(std::vector<MeasureVal>& storeVals)
 {
   GenerateMatrixAndVector();
   Matrix solutionVector = netMatrix.getInverse() * netVector;
-
-  for(int i = 1; i < nodes.size(); ++i)
+  solutionVector.MatrixShow();
+  int i = 1;
+  for(set<int>::iterator it=nodes.begin(); it!=nodes.end(); ++it)
   {
-    storeVals.push_back(MeasureVal("U" + to_string(i), solutionVector.getValue(i, 1), "V"));
+    if(*it != 0)
+      storeVals.push_back(MeasureVal("U" + to_string(*it), solutionVector.getValue(i++, 1), "V"));
   }
 }
