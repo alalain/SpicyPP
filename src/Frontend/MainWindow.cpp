@@ -12,6 +12,8 @@ MainWindow::MainWindow(QWidget* parent)
 
   connect(ui->ResetButton, &QPushButton::clicked, this, &MainWindow::onReset);
   connect(ui->AddButton, &QPushButton::clicked, this, &MainWindow::onAdd);
+  connect(ui->CalculateButton, &QPushButton::clicked, this,
+          &MainWindow::onCalculate);
   ui->Node1->setValidator(node1Validator);
   ui->Node2->setValidator(node2Validator);
   ui->Value->setValidator(valueValidator);
@@ -25,10 +27,35 @@ MainWindow::~MainWindow()
 
 void MainWindow::onReset()
 {
+  network = Network();
+  ui->CompList->clear();
+  ui->SolList->clear();
+  ui->CompList->show();
+  ui->SolList->hide();
+}
+
+void MainWindow::onCalculate()
+{
+  std::vector<MeasureVal> solutions;
+  network.GetNewestSolution(solutions);
+  ui->CompList->hide();
+  ui->SolList->show();
+  QString text = "";
+  for (std::vector<int>::size_type i = 0; i < solutions.size(); i++)
+  {
+    text = "";
+    text.append(QString::fromStdString(solutions[i].name))
+        .append(": ")
+        .append(QString::number(solutions[i].value))
+        .append(QString::fromStdString(solutions[i].unit));
+    ui->SolList->addItem(text);
+  }
 }
 
 void MainWindow::onAdd()
 {
+  ui->SolList->hide();
+  ui->CompList->show();
   // Resistor = 0 VoltageSource = 1
   int pos = 0;
   bool errorDetected = false;

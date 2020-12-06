@@ -27,6 +27,7 @@ class MainWindow : public QMainWindow
   QIntValidator* componentValidator;
 
   Network network;
+  void onCalculate();
   void onReset();
   void onAdd();
 };
