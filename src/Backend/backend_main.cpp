@@ -17,8 +17,8 @@ int main()
   net.AddResistor("R5", 0, 2, 20);
   net.AddResistor("R1", 2, 3, 10);
   net.AddResistor("R2", 3, 5, 15);
-  net.AddVoltageSource("V7", 0, 2, 5);
-  net.AddVoltageSource("V1", 2, 5, 10);
+  net.AddVoltageSource("V7", 2, 0, 5);
+  net.AddVoltageSource("V1", 5, 2, 10);
 
   vector<string> netList = net.GetNewestNetlist();
   cout << "NetList:" << endl;

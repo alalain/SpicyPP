@@ -14,8 +14,8 @@ class Matrix
     Matrix(int rows, int columns, std::vector<double> values = std::vector<double>());       //instantiate Matrix
 
     double getValue(int row, int column) const;
-    int getRows() const;
-    int getColumns() const;
+    int getRows() const {return values.size();}
+    int getColumns() const{return values[0].size();} // because every Column have the same size
     bool hasError() const; //if rows or columns <= 0;
 
     void setValue(double value, int row = 0, int column = 0);
@@ -37,7 +37,7 @@ class Matrix
      * @return New Multiplied Matrix
      */
     friend Matrix operator*(const Matrix& left, const Matrix& right);
-    friend bool operator==(Matrix& left, Matrix& right);
+    //friend bool operator==(Matrix& left, Matrix& right);
 
     //TODO Only for test
     void MatrixShow()
