@@ -8,7 +8,6 @@
 #include <gtest/gtest.h>
 #include "Matrix.h"
 
-
 bool eqMatrix (Matrix lhs, Matrix rhs){
   for(int i = 0; i <= lhs.getRows(); ++i){
     for(int j = 0; j <= rhs.getColumns(); ++j){
@@ -31,6 +30,24 @@ TEST(MatrixTest, InverseTest) {
                                 -2,  1,  0, -1,
                                 -4,  1,  1, -1});
   EXPECT_TRUE( eqMatrix(m1.getInverse(), m1inverse) );
+}
+
+TEST(MatrixTest, InverseSingularFailTest) {
+
+  Matrix m1= Matrix(4, 4, {0, 2, 2, 0,    //first item is 0 so the Matrix is singular= not invertable
+                           2, 5, 4, 1,
+                           2, 4, 3, 1,
+                           0, 1, -1, 1});
+  try
+  {
+    m1.getInverse();
+    FAIL();
+  }
+  catch( const std::range_error& err )
+  {
+    // check exception
+    ASSERT_STREQ( "Inverse doesn't exist because the Matrix is singular", err.what() );
+  }
 }
 
 
