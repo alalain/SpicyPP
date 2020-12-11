@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7ecomponent',['~Component',['../classComponent.html#ad82d7393e339c1b19cc17a0d55b5674d',1,'Component']]]
+  ['voltagesource',['VoltageSource',['../classVoltageSource.html#a0afb67483166d71942cefa624f484251',1,'VoltageSource']]]
 ];

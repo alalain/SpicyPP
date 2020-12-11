@@ -1,5 +1,5 @@
-\hypertarget{Matrix_8cpp}{}\section{/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\+Matrix.cpp File Reference}
-\label{Matrix_8cpp}\index{/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\+Matrix.\+cpp@{/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\+Matrix.\+cpp}}
+\hypertarget{Matrix_8cpp}{}\section{/home/user/\+Desktop/\+Spicy\+P\+P/\+Spicy\+P\+P/src/\+Backend/\+Matrix.cpp File Reference}
+\label{Matrix_8cpp}\index{/home/user/\+Desktop/\+Spicy\+P\+P/\+Spicy\+P\+P/src/\+Backend/\+Matrix.\+cpp@{/home/user/\+Desktop/\+Spicy\+P\+P/\+Spicy\+P\+P/src/\+Backend/\+Matrix.\+cpp}}
 {\ttfamily \#include \char`\"{}Matrix.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$stdexcept$>$}\newline
 Include dependency graph for Matrix.\+cpp\+:
@@ -7,11 +7,25 @@ Include dependency graph for Matrix.\+cpp\+:
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \hyperlink{Matrix_8cpp_a8da7d2d3dd36d4dc0ae48c37a46e85e7}{rref} (\hyperlink{classMatrix}{Matrix} \&rref\+Matrix)
+\item 
+void \hyperlink{Matrix_8cpp_aacfa9175c4d77bdd8615578848c7f85f}{divide\+Line} (\hyperlink{classMatrix}{Matrix} \&rref\+Matrix, int line, double divider)
+\item 
+void \hyperlink{Matrix_8cpp_a55531d8385e27f6cae40fa9631a67ab9}{reduce\+Forward} (\hyperlink{classMatrix}{Matrix} \&rref\+Matrix, int line, int col)
+\item 
+void \hyperlink{Matrix_8cpp_a1f4cdc31b77107123e6a1cee884b3493}{reduce\+Backward} (\hyperlink{classMatrix}{Matrix} \&rref\+Matrix, int line, int col)
+\item 
 \hyperlink{classMatrix}{Matrix} \hyperlink{Matrix_8cpp_a6b58c286243be002bf669704ad15353a}{operator$\ast$} (const \hyperlink{classMatrix}{Matrix} \&left, const \hyperlink{classMatrix}{Matrix} \&right)
 \end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
+\mbox{\Hypertarget{Matrix_8cpp_aacfa9175c4d77bdd8615578848c7f85f}\label{Matrix_8cpp_aacfa9175c4d77bdd8615578848c7f85f}} 
+\index{Matrix.\+cpp@{Matrix.\+cpp}!divide\+Line@{divide\+Line}}
+\index{divide\+Line@{divide\+Line}!Matrix.\+cpp@{Matrix.\+cpp}}
+\subsubsection{\texorpdfstring{divide\+Line()}{divideLine()}}
+{\footnotesize\ttfamily void divide\+Line (\begin{DoxyParamCaption}\item[{\hyperlink{classMatrix}{Matrix} \&}]{rref\+Matrix,  }\item[{int}]{line,  }\item[{double}]{divider }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{Matrix_8cpp_a6b58c286243be002bf669704ad15353a}\label{Matrix_8cpp_a6b58c286243be002bf669704ad15353a}} 
 \index{Matrix.\+cpp@{Matrix.\+cpp}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!Matrix.\+cpp@{Matrix.\+cpp}}
@@ -28,3 +42,21 @@ Multiplying left with right \hyperlink{classMatrix}{Matrix}. Watch out for Order
 \begin{DoxyReturn}{Returns}
 New Multiplied \hyperlink{classMatrix}{Matrix} 
 \end{DoxyReturn}
+\mbox{\Hypertarget{Matrix_8cpp_a1f4cdc31b77107123e6a1cee884b3493}\label{Matrix_8cpp_a1f4cdc31b77107123e6a1cee884b3493}} 
+\index{Matrix.\+cpp@{Matrix.\+cpp}!reduce\+Backward@{reduce\+Backward}}
+\index{reduce\+Backward@{reduce\+Backward}!Matrix.\+cpp@{Matrix.\+cpp}}
+\subsubsection{\texorpdfstring{reduce\+Backward()}{reduceBackward()}}
+{\footnotesize\ttfamily void reduce\+Backward (\begin{DoxyParamCaption}\item[{\hyperlink{classMatrix}{Matrix} \&}]{rref\+Matrix,  }\item[{int}]{line,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Matrix_8cpp_a55531d8385e27f6cae40fa9631a67ab9}\label{Matrix_8cpp_a55531d8385e27f6cae40fa9631a67ab9}} 
+\index{Matrix.\+cpp@{Matrix.\+cpp}!reduce\+Forward@{reduce\+Forward}}
+\index{reduce\+Forward@{reduce\+Forward}!Matrix.\+cpp@{Matrix.\+cpp}}
+\subsubsection{\texorpdfstring{reduce\+Forward()}{reduceForward()}}
+{\footnotesize\ttfamily void reduce\+Forward (\begin{DoxyParamCaption}\item[{\hyperlink{classMatrix}{Matrix} \&}]{rref\+Matrix,  }\item[{int}]{line,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Matrix_8cpp_a8da7d2d3dd36d4dc0ae48c37a46e85e7}\label{Matrix_8cpp_a8da7d2d3dd36d4dc0ae48c37a46e85e7}} 
+\index{Matrix.\+cpp@{Matrix.\+cpp}!rref@{rref}}
+\index{rref@{rref}!Matrix.\+cpp@{Matrix.\+cpp}}
+\subsubsection{\texorpdfstring{rref()}{rref()}}
+{\footnotesize\ttfamily void rref (\begin{DoxyParamCaption}\item[{\hyperlink{classMatrix}{Matrix} \&}]{rref\+Matrix }\end{DoxyParamCaption})}
+

@@ -35,6 +35,17 @@ double \hyperlink{classResistor_ac940c96f396ad2ad276d03c60106ebe4}{resistance}
 \subsubsection{\texorpdfstring{Resistor()}{Resistor()}}
 {\footnotesize\ttfamily Resistor\+::\+Resistor (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{node1,  }\item[{int}]{node2,  }\item[{double}]{resistance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Adds a new resistor to the network 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the resistor \\
+\hline
+{\em node1} & First connection of the resistor \\
+\hline
+{\em node2} & Second connection of the resistor \\
+\hline
+{\em resistance} & Value of the resistor \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
@@ -44,6 +55,11 @@ double \hyperlink{classResistor_ac940c96f396ad2ad276d03c60106ebe4}{resistance}
 \subsubsection{\texorpdfstring{Add\+Footprintto\+Matrix()}{AddFootprinttoMatrix()}}
 {\footnotesize\ttfamily void Resistor\+::\+Add\+Footprintto\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{classNetwork}{Network} \&}]{network }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Adds a new footprint to the matrix 
+\begin{DoxyParams}{Parameters}
+{\em network} & Reference to the network \\
+\hline
+\end{DoxyParams}
 
 
 Implements \hyperlink{classComponent_a833d40a0f50c3c06dcab2e035b758e6f}{Component}.
@@ -54,6 +70,9 @@ Implements \hyperlink{classComponent_a833d40a0f50c3c06dcab2e035b758e6f}{Componen
 \subsubsection{\texorpdfstring{Get\+Values()}{GetValues()}}
 {\footnotesize\ttfamily std\+::vector$<$ double $>$ Resistor\+::\+Get\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Returns all values of the resistor \begin{DoxyReturn}{Returns}
+Values of resistor 
+\end{DoxyReturn}
 
 
 Implements \hyperlink{classComponent_a7c6ba16177143bc9945583a9c3df4c89}{Component}.
@@ -71,5 +90,5 @@ Implements \hyperlink{classComponent_a7c6ba16177143bc9945583a9c3df4c89}{Componen
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\hyperlink{Resistor_8h}{Resistor.\+h}\item 
-/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\hyperlink{Resistor_8cpp}{Resistor.\+cpp}\end{DoxyCompactItemize}
+/home/user/\+Desktop/\+Spicy\+P\+P/\+Spicy\+P\+P/src/\+Backend/\hyperlink{Resistor_8h}{Resistor.\+h}\item 
+/home/user/\+Desktop/\+Spicy\+P\+P/\+Spicy\+P\+P/src/\+Backend/\hyperlink{Resistor_8cpp}{Resistor.\+cpp}\end{DoxyCompactItemize}

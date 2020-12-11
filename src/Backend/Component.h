@@ -16,9 +16,9 @@ class Component
  public:
   /**
    * Constructor for Component
-   * @param Name of the component
-   * @param First node, the component is connected to
-   * @param Second node, the component is connected to
+   * @param name: Name of the component
+   * @param node1: First node, the component is connected to
+   * @param node2: Second node, the component is connected to
    */
   Component(std::string name, int node1, int node2)
       : name(name), node1(node1), node2(node2)
@@ -52,7 +52,7 @@ class Component
 
   /**
    * Adds footprint of the component to the Network Matrix
-   * @param Network where the footprint should be added to
+   * @param network: Network where the footprint should be added to
    */
   virtual void AddFootprinttoMatrix(class Network& network) const = 0;
   /**

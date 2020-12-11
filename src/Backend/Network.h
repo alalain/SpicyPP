@@ -41,13 +41,46 @@ class Network
     void GenerateNetList();
 
   public:
+    /**
+       * Getter for current net matrix
+       * @return Returns current net matrix
+       */
     Matrix& GetCurrentNetMatrix() { return netMatrix; }
+    /**
+       * Getter for the current net vector
+       * @return Returns current net vector
+       */
     Matrix& GetCurrentNetVector() { return netVector; }
+    /**
+       * Getter for the current node set
+       * @return Returns current node set
+       */
     const std::set<int>& GetCurrentNodeSet(){return nodes; }
+    /**
+       * Getter for the net list
+       * @return Returns net list
+       */
     std::vector<std::string> GetNewestNetlist();
+    /**
+       * Calculate the voltages of the network
+       * @param storeVals: Empty vector for the storage of the values
+       */
     void GetNewestSolution(std::vector<MeasureVal>& storeVals);
-
+    /**
+       * Adds a new resistor to the network
+       * @param name: Name of the resistor
+       * @param node1: First connection of the resistor
+       * @param node2: Second connection of the resistor
+       * @param resistance: Value of the resistor
+       */
     void AddResistor(std::string name, int node1, int node2, double resistance);
+    /**
+       * Add a new voltage source to the network
+       * @param name: Name of the component
+       * @param node1: First connection of the voltage source
+       * @param node2: Second connection of the voltage source
+       * @param voltage: Value of the voltage source
+       */
     void AddVoltageSource(std::string name, int node1, int node2, double voltage);
 };
 

@@ -11,6 +11,12 @@ class Matrix
     std::vector<std::vector<double>> values;
 
   public:
+    /**
+       * Constructor for Matrix
+       * @param rows: Number if rows
+       * @param columns: Number of columns
+       * @param values: Values of the matrix
+       */
     Matrix(int rows, int columns, std::vector<double> values = std::vector<double>());       //instantiate Matrix
 
     /**

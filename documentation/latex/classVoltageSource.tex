@@ -47,6 +47,17 @@ static int \hyperlink{classVoltageSource_ade16a2431763eeff86ec7a4f842cf6f0}{sour
 \subsubsection{\texorpdfstring{Voltage\+Source()}{VoltageSource()}}
 {\footnotesize\ttfamily Voltage\+Source\+::\+Voltage\+Source (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{node1,  }\item[{int}]{node2,  }\item[{double}]{voltage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Add a new voltage source to the network 
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the component \\
+\hline
+{\em node1} & First connection of the voltage source \\
+\hline
+{\em node2} & Second connection of the voltage source \\
+\hline
+{\em voltage} & Value of the voltage source \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
@@ -56,6 +67,11 @@ static int \hyperlink{classVoltageSource_ade16a2431763eeff86ec7a4f842cf6f0}{sour
 \subsubsection{\texorpdfstring{Add\+Footprintto\+Matrix()}{AddFootprinttoMatrix()}}
 {\footnotesize\ttfamily void Voltage\+Source\+::\+Add\+Footprintto\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{classNetwork}{Network} \&}]{network }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Adds a new footprint to the matrix 
+\begin{DoxyParams}{Parameters}
+{\em network} & Reference to the network \\
+\hline
+\end{DoxyParams}
 
 
 Implements \hyperlink{classComponent_a833d40a0f50c3c06dcab2e035b758e6f}{Component}.
@@ -66,12 +82,18 @@ Implements \hyperlink{classComponent_a833d40a0f50c3c06dcab2e035b758e6f}{Componen
 \subsubsection{\texorpdfstring{get\+Source\+Count()}{getSourceCount()}}
 {\footnotesize\ttfamily static int Voltage\+Source\+::get\+Source\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
+Getter for the source count \begin{DoxyReturn}{Returns}
+Returns the source count 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classVoltageSource_a60bb1c5c07f668854a817d626f220f84}\label{classVoltageSource_a60bb1c5c07f668854a817d626f220f84}} 
 \index{Voltage\+Source@{Voltage\+Source}!Get\+Values@{Get\+Values}}
 \index{Get\+Values@{Get\+Values}!Voltage\+Source@{Voltage\+Source}}
 \subsubsection{\texorpdfstring{Get\+Values()}{GetValues()}}
 {\footnotesize\ttfamily std\+::vector$<$ double $>$ Voltage\+Source\+::\+Get\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Returns all values of the voltage source \begin{DoxyReturn}{Returns}
+Values of voltage source 
+\end{DoxyReturn}
 
 
 Implements \hyperlink{classComponent_a7c6ba16177143bc9945583a9c3df4c89}{Component}.
@@ -101,5 +123,5 @@ Implements \hyperlink{classComponent_a7c6ba16177143bc9945583a9c3df4c89}{Componen
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\hyperlink{VoltageSource_8h}{Voltage\+Source.\+h}\item 
-/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\hyperlink{VoltageSource_8cpp}{Voltage\+Source.\+cpp}\end{DoxyCompactItemize}
+/home/user/\+Desktop/\+Spicy\+P\+P/\+Spicy\+P\+P/src/\+Backend/\hyperlink{VoltageSource_8h}{Voltage\+Source.\+h}\item 
+/home/user/\+Desktop/\+Spicy\+P\+P/\+Spicy\+P\+P/src/\+Backend/\hyperlink{VoltageSource_8cpp}{Voltage\+Source.\+cpp}\end{DoxyCompactItemize}

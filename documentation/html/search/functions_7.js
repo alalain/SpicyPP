@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resistor',['Resistor',['../classResistor.html#a2b3a5d755e8f1d8de6febc51740945ab',1,'Resistor']]]
+  ['operator_2a',['operator*',['../Matrix_8cpp.html#a6b58c286243be002bf669704ad15353a',1,'Matrix.cpp']]]
 ];

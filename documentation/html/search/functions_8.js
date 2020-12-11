@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['setvalue',['setValue',['../classMatrix.html#a8271fe6ec51ea43fdf77f4b7f96333d9',1,'Matrix']]],
-  ['setvaluecolumn',['setValueColumn',['../classMatrix.html#ae33b973c97f6deed0f5936975c148aed',1,'Matrix::setValueColumn(std::vector&lt; double &gt; inputValues, int column, double fillValue)'],['../classMatrix.html#a9af4d3f38ba62a90d31467dd43f48ac1',1,'Matrix::setValueColumn(std::vector&lt; double &gt; inputValues, int column)']]],
-  ['setvaluerow',['setValueRow',['../classMatrix.html#ae204cbbd2279c21e0e22fa2fbd1a71ca',1,'Matrix::setValueRow(std::vector&lt; double &gt; inputValues, int row, double fillValue)'],['../classMatrix.html#af331f831fa9f4b800a57280818477cb8',1,'Matrix::setValueRow(std::vector&lt; double &gt; inputValues, int row)']]],
-  ['setvalues',['setValues',['../classMatrix.html#a08f522fc56b7649a4242e7a0aefdfadd',1,'Matrix']]]
+  ['reducebackward',['reduceBackward',['../Matrix_8cpp.html#a1f4cdc31b77107123e6a1cee884b3493',1,'Matrix.cpp']]],
+  ['reduceforward',['reduceForward',['../Matrix_8cpp.html#a55531d8385e27f6cae40fa9631a67ab9',1,'Matrix.cpp']]],
+  ['resistor',['Resistor',['../classResistor.html#a2b3a5d755e8f1d8de6febc51740945ab',1,'Resistor']]],
+  ['rref',['rref',['../Matrix_8cpp.html#a8da7d2d3dd36d4dc0ae48c37a46e85e7',1,'Matrix.cpp']]]
 ];

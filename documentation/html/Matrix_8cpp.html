@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SpicyPP: /home/user/Documents/SpicyPP/src/Backend/Matrix.cpp File Reference</title>
+<title>SpicyPP: /home/user/Desktop/SpicyPP/SpicyPP/src/Backend/Matrix.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,16 +74,58 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Matrix.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="Matrix_8cpp__incl.png" border="0" usemap="#_2home_2user_2Documents_2SpicyPP_2src_2Backend_2Matrix_8cpp" alt=""/></div>
+<div class="center"><img src="Matrix_8cpp__incl.png" border="0" usemap="#_2home_2user_2Desktop_2SpicyPP_2SpicyPP_2src_2Backend_2Matrix_8cpp" alt=""/></div>
 <!-- MAP 0 -->
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a8da7d2d3dd36d4dc0ae48c37a46e85e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Matrix_8cpp.html#a8da7d2d3dd36d4dc0ae48c37a46e85e7">rref</a> (<a class="el" href="classMatrix.html">Matrix</a> &amp;rrefMatrix)</td></tr>
+<tr class="separator:a8da7d2d3dd36d4dc0ae48c37a46e85e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacfa9175c4d77bdd8615578848c7f85f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Matrix_8cpp.html#aacfa9175c4d77bdd8615578848c7f85f">divideLine</a> (<a class="el" href="classMatrix.html">Matrix</a> &amp;rrefMatrix, int line, double divider)</td></tr>
+<tr class="separator:aacfa9175c4d77bdd8615578848c7f85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55531d8385e27f6cae40fa9631a67ab9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Matrix_8cpp.html#a55531d8385e27f6cae40fa9631a67ab9">reduceForward</a> (<a class="el" href="classMatrix.html">Matrix</a> &amp;rrefMatrix, int line, int col)</td></tr>
+<tr class="separator:a55531d8385e27f6cae40fa9631a67ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4cdc31b77107123e6a1cee884b3493"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Matrix_8cpp.html#a1f4cdc31b77107123e6a1cee884b3493">reduceBackward</a> (<a class="el" href="classMatrix.html">Matrix</a> &amp;rrefMatrix, int line, int col)</td></tr>
+<tr class="separator:a1f4cdc31b77107123e6a1cee884b3493"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b58c286243be002bf669704ad15353a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatrix.html">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Matrix_8cpp.html#a6b58c286243be002bf669704ad15353a">operator*</a> (const <a class="el" href="classMatrix.html">Matrix</a> &amp;left, const <a class="el" href="classMatrix.html">Matrix</a> &amp;right)</td></tr>
 <tr class="separator:a6b58c286243be002bf669704ad15353a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aacfa9175c4d77bdd8615578848c7f85f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacfa9175c4d77bdd8615578848c7f85f">&#9670;&nbsp;</a></span>divideLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void divideLine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMatrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rrefMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>divider</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6b58c286243be002bf669704ad15353a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b58c286243be002bf669704ad15353a">&#9670;&nbsp;</a></span>operator*()</h2>
 
@@ -117,6 +159,92 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>New Multiplied <a class="el" href="classMatrix.html">Matrix</a> </dd></dl>
+
+</div>
+</div>
+<a id="a1f4cdc31b77107123e6a1cee884b3493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f4cdc31b77107123e6a1cee884b3493">&#9670;&nbsp;</a></span>reduceBackward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reduceBackward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMatrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rrefMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55531d8385e27f6cae40fa9631a67ab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55531d8385e27f6cae40fa9631a67ab9">&#9670;&nbsp;</a></span>reduceForward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reduceForward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMatrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rrefMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8da7d2d3dd36d4dc0ae48c37a46e85e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da7d2d3dd36d4dc0ae48c37a46e85e7">&#9670;&nbsp;</a></span>rref()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rref </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMatrix.html">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rrefMatrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

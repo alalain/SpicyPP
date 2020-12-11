@@ -152,6 +152,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Adds a new resistor to the network </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the resistor </td></tr>
+    <tr><td class="paramname">node1</td><td>First connection of the resistor </td></tr>
+    <tr><td class="paramname">node2</td><td>Second connection of the resistor </td></tr>
+    <tr><td class="paramname">resistance</td><td>Value of the resistor </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -192,6 +201,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Add a new voltage source to the network </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the component </td></tr>
+    <tr><td class="paramname">node1</td><td>First connection of the voltage source </td></tr>
+    <tr><td class="paramname">node2</td><td>Second connection of the voltage source </td></tr>
+    <tr><td class="paramname">voltage</td><td>Value of the voltage source </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -267,6 +285,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Getter for current net matrix </p><dl class="section return"><dt>Returns</dt><dd>Returns current net matrix </dd></dl>
 
 </div>
 </div>
@@ -292,6 +311,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Getter for the current net vector </p><dl class="section return"><dt>Returns</dt><dd>Returns current net vector </dd></dl>
 
 </div>
 </div>
@@ -317,6 +337,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Getter for the current node set </p><dl class="section return"><dt>Returns</dt><dd>Returns current node set </dd></dl>
 
 </div>
 </div>
@@ -334,6 +355,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Getter for the net list </p><dl class="section return"><dt>Returns</dt><dd>Returns net list </dd></dl>
 
 </div>
 </div>
@@ -352,6 +374,12 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Calculate the voltages of the network </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">storeVals</td><td>Empty vector for the storage of the values </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -467,8 +495,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/user/Documents/SpicyPP/src/Backend/<a class="el" href="Network_8h_source.html">Network.h</a></li>
-<li>/home/user/Documents/SpicyPP/src/Backend/<a class="el" href="Network_8cpp.html">Network.cpp</a></li>
+<li>/home/user/Desktop/SpicyPP/SpicyPP/src/Backend/<a class="el" href="Network_8h_source.html">Network.h</a></li>
+<li>/home/user/Desktop/SpicyPP/SpicyPP/src/Backend/<a class="el" href="Network_8cpp.html">Network.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
