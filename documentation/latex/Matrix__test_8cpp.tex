@@ -1,79 +1,52 @@
 \hypertarget{Matrix__test_8cpp}{}\section{/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\+Matrix\+\_\+test.cpp File Reference}
 \label{Matrix__test_8cpp}\index{/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\+Matrix\+\_\+test.\+cpp@{/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\+Matrix\+\_\+test.\+cpp}}
-{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}Matrix.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
 Include dependency graph for Matrix\+\_\+test.\+cpp\+:
 % FIG 0
-\subsection*{Enumerations}
-\begin{DoxyCompactItemize}
-\item 
-enum \{ \hyperlink{Matrix__test_8cpp_a06fc87d81c62e9abb8790b6e5713c55ba60dc21313e3a8824d80be367b3c245cd}{Msize} = 2
- \}
-\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{Matrix__test_8cpp_aa283a1d03f2f660dfbd61a9b96d9ae01}{T\+E\+ST} (Matrix\+Test, Matrix\+Get\+Values)
+bool \hyperlink{Matrix__test_8cpp_a5ab19e16478d42b4f3ee16c2f737fb31}{eq\+Matrix} (\hyperlink{classMatrix}{Matrix} lhs, \hyperlink{classMatrix}{Matrix} rhs)
 \item 
-\hyperlink{Matrix__test_8cpp_a5fad2b5a494db32ab262ac7665f853fe}{T\+E\+ST} (Matrix\+Test, Matrix\+Rows\+And\+Column\+Count)
+\hyperlink{Matrix__test_8cpp_a67cb2ddfafdd98248865aa0f344f9b43}{T\+E\+ST} (Matrix\+Test, Inverse\+Test)
 \item 
-\hyperlink{Matrix__test_8cpp_aae09465375271feb1b582a87fd8d6c89}{T\+E\+ST} (Matrix\+Test, Matrix\+Set\+Value)
+\hyperlink{Matrix__test_8cpp_a9a4588a8ac4f31782265fab3e4ef76bf}{T\+E\+ST} (Matrix\+Test, Inverse\+Singular\+Fail\+Test)
 \item 
-\hyperlink{Matrix__test_8cpp_aa216ab9f37db1a213387fc9997d73482}{T\+E\+ST} (Matrix\+Test, Matrix\+Set\+Values)
+\hyperlink{Matrix__test_8cpp_a40459ec6d5dbd0d1de63fd5646caa0b1}{T\+E\+ST} (Matrix\+Test, Inverse\+Matrix\+Beginning\+With\+Zero)
 \item 
-\hyperlink{Matrix__test_8cpp_a6aa104a5cd8ca698f3ecd1efb37bab3b}{T\+E\+ST} (Matrix\+Test, Matrix\+Set\+Row)
-\item 
-\hyperlink{Matrix__test_8cpp_a9e5ea9e0ce64986ffef09ac15f3d1997}{T\+E\+ST} (Matrix\+Test, Matrix\+Set\+Column)
+\hyperlink{Matrix__test_8cpp_a770c5b837bee7505a3f26840b70994b5}{T\+E\+ST} (Matrix\+Test, Inverse\+Non\+Nx\+N\+Matrix)
 \end{DoxyCompactItemize}
 
 
-\subsection{Enumeration Type Documentation}
-\mbox{\Hypertarget{Matrix__test_8cpp_a06fc87d81c62e9abb8790b6e5713c55b}\label{Matrix__test_8cpp_a06fc87d81c62e9abb8790b6e5713c55b}} 
-\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
-{\footnotesize\ttfamily anonymous enum}
-
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Msize@{Msize}!Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}}\index{Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}!Msize@{Msize}}}\mbox{\Hypertarget{Matrix__test_8cpp_a06fc87d81c62e9abb8790b6e5713c55ba60dc21313e3a8824d80be367b3c245cd}\label{Matrix__test_8cpp_a06fc87d81c62e9abb8790b6e5713c55ba60dc21313e3a8824d80be367b3c245cd}} 
-Msize&\\
-\hline
-
-\end{DoxyEnumFields}
-
-
 \subsection{Function Documentation}
-\mbox{\Hypertarget{Matrix__test_8cpp_aa283a1d03f2f660dfbd61a9b96d9ae01}\label{Matrix__test_8cpp_aa283a1d03f2f660dfbd61a9b96d9ae01}} 
-\index{Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
-\index{T\+E\+ST@{T\+E\+ST}!Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}}
-\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
-{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Matrix\+Test}]{,  }\item[{Matrix\+Get\+Values}]{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{Matrix__test_8cpp_a5ab19e16478d42b4f3ee16c2f737fb31}\label{Matrix__test_8cpp_a5ab19e16478d42b4f3ee16c2f737fb31}} 
+\index{Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}!eq\+Matrix@{eq\+Matrix}}
+\index{eq\+Matrix@{eq\+Matrix}!Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}}
+\subsubsection{\texorpdfstring{eq\+Matrix()}{eqMatrix()}}
+{\footnotesize\ttfamily bool eq\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{classMatrix}{Matrix}}]{lhs,  }\item[{\hyperlink{classMatrix}{Matrix}}]{rhs }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{Matrix__test_8cpp_a5fad2b5a494db32ab262ac7665f853fe}\label{Matrix__test_8cpp_a5fad2b5a494db32ab262ac7665f853fe}} 
+\mbox{\Hypertarget{Matrix__test_8cpp_a67cb2ddfafdd98248865aa0f344f9b43}\label{Matrix__test_8cpp_a67cb2ddfafdd98248865aa0f344f9b43}} 
 \index{Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
 \index{T\+E\+ST@{T\+E\+ST}!Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}}
-\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
-{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Matrix\+Test}]{,  }\item[{Matrix\+Rows\+And\+Column\+Count}]{ }\end{DoxyParamCaption})}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Matrix\+Test}]{,  }\item[{Inverse\+Test}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{Matrix__test_8cpp_aae09465375271feb1b582a87fd8d6c89}\label{Matrix__test_8cpp_aae09465375271feb1b582a87fd8d6c89}} 
+\mbox{\Hypertarget{Matrix__test_8cpp_a9a4588a8ac4f31782265fab3e4ef76bf}\label{Matrix__test_8cpp_a9a4588a8ac4f31782265fab3e4ef76bf}} 
 \index{Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
 \index{T\+E\+ST@{T\+E\+ST}!Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}}
-\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
-{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Matrix\+Test}]{,  }\item[{Matrix\+Set\+Value}]{ }\end{DoxyParamCaption})}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Matrix\+Test}]{,  }\item[{Inverse\+Singular\+Fail\+Test}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{Matrix__test_8cpp_aa216ab9f37db1a213387fc9997d73482}\label{Matrix__test_8cpp_aa216ab9f37db1a213387fc9997d73482}} 
+\mbox{\Hypertarget{Matrix__test_8cpp_a40459ec6d5dbd0d1de63fd5646caa0b1}\label{Matrix__test_8cpp_a40459ec6d5dbd0d1de63fd5646caa0b1}} 
 \index{Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
 \index{T\+E\+ST@{T\+E\+ST}!Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}}
-\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
-{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Matrix\+Test}]{,  }\item[{Matrix\+Set\+Values}]{ }\end{DoxyParamCaption})}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Matrix\+Test}]{,  }\item[{Inverse\+Matrix\+Beginning\+With\+Zero}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{Matrix__test_8cpp_a6aa104a5cd8ca698f3ecd1efb37bab3b}\label{Matrix__test_8cpp_a6aa104a5cd8ca698f3ecd1efb37bab3b}} 
+\mbox{\Hypertarget{Matrix__test_8cpp_a770c5b837bee7505a3f26840b70994b5}\label{Matrix__test_8cpp_a770c5b837bee7505a3f26840b70994b5}} 
 \index{Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
 \index{T\+E\+ST@{T\+E\+ST}!Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}}
-\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
-{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Matrix\+Test}]{,  }\item[{Matrix\+Set\+Row}]{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{Matrix__test_8cpp_a9e5ea9e0ce64986ffef09ac15f3d1997}\label{Matrix__test_8cpp_a9e5ea9e0ce64986ffef09ac15f3d1997}} 
-\index{Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
-\index{T\+E\+ST@{T\+E\+ST}!Matrix\+\_\+test.\+cpp@{Matrix\+\_\+test.\+cpp}}
-\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
-{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Matrix\+Test}]{,  }\item[{Matrix\+Set\+Column}]{ }\end{DoxyParamCaption})}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Matrix\+Test}]{,  }\item[{Inverse\+Non\+Nx\+N\+Matrix}]{ }\end{DoxyParamCaption})}
 

@@ -51,3 +51,4 @@ Makefile
 /tests[1]_tests.cmake
 /tests[1]_include.cmake
 /tests[1]_tests.cmake
+/.cproject

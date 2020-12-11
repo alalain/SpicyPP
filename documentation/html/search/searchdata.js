@@ -1,12 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "ghmostv",
-  1: "m",
-  2: "m",
-  3: "ghmst",
-  4: "v",
-  5: "m",
-  6: "o"
+  0: "abceghmnorstuv~",
+  1: "cmnrv",
+  2: "bcmnrv",
+  3: "aceghmorstv~",
+  4: "cnrsuv",
+  5: "o"
 };
 
 var indexSectionNames =
@@ -16,8 +15,7 @@ var indexSectionNames =
   2: "files",
   3: "functions",
   4: "variables",
-  5: "enumvalues",
-  6: "related"
+  5: "related"
 };
 
 var indexSectionLabels =
@@ -27,7 +25,6 @@ var indexSectionLabels =
   2: "Files",
   3: "Functions",
   4: "Variables",
-  5: "Enumerator",
-  6: "Friends"
+  5: "Friends"
 };
 

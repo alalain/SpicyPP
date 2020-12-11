@@ -1,0 +1,118 @@
+\hypertarget{classComponent}{}\section{Component Class Reference}
+\label{classComponent}\index{Component@{Component}}
+
+
+{\ttfamily \#include $<$Component.\+h$>$}
+
+
+
+Inheritance diagram for Component\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classComponent_a0af3b5b3c3463d6e617ec791900f4c6b}{Component} (std\+::string \hyperlink{classComponent_a46343549452bda5ee9752f7a9bc15efb}{name}, int \hyperlink{classComponent_a7d8cd23c0aaff5c139b825e77c0b2051}{node1}, int \hyperlink{classComponent_af96df64e1eb5fac7dae7c674cac3d31e}{node2})
+\item 
+virtual \hyperlink{classComponent_ad82d7393e339c1b19cc17a0d55b5674d}{$\sim$\+Component} ()=default
+\item 
+std\+::string \hyperlink{classComponent_a9af52e1878212622948ab2189f4f29dd}{Get\+Name} () const
+\item 
+int \hyperlink{classComponent_af6503c2bf9a88eff198ffbfcc3e24876}{Get\+Node1} () const
+\item 
+int \hyperlink{classComponent_aac8e1e6f5ecd3529912bd4afa0903921}{Get\+Node2} () const
+\item 
+virtual void \hyperlink{classComponent_a833d40a0f50c3c06dcab2e035b758e6f}{Add\+Footprintto\+Matrix} (class \hyperlink{classNetwork}{Network} \&network) const =0
+\item 
+virtual std\+::vector$<$ double $>$ \hyperlink{classComponent_a7c6ba16177143bc9945583a9c3df4c89}{Get\+Values} () const =0
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classComponent_a46343549452bda5ee9752f7a9bc15efb}{name}
+\item 
+int \hyperlink{classComponent_a7d8cd23c0aaff5c139b825e77c0b2051}{node1}
+\item 
+int \hyperlink{classComponent_af96df64e1eb5fac7dae7c674cac3d31e}{node2}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classComponent_a0af3b5b3c3463d6e617ec791900f4c6b}\label{classComponent_a0af3b5b3c3463d6e617ec791900f4c6b}} 
+\index{Component@{Component}!Component@{Component}}
+\index{Component@{Component}!Component@{Component}}
+\subsubsection{\texorpdfstring{Component()}{Component()}}
+{\footnotesize\ttfamily Component\+::\+Component (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{node1,  }\item[{int}]{node2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classComponent_ad82d7393e339c1b19cc17a0d55b5674d}\label{classComponent_ad82d7393e339c1b19cc17a0d55b5674d}} 
+\index{Component@{Component}!````~Component@{$\sim$\+Component}}
+\index{````~Component@{$\sim$\+Component}!Component@{Component}}
+\subsubsection{\texorpdfstring{$\sim$\+Component()}{~Component()}}
+{\footnotesize\ttfamily virtual Component\+::$\sim$\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classComponent_a833d40a0f50c3c06dcab2e035b758e6f}\label{classComponent_a833d40a0f50c3c06dcab2e035b758e6f}} 
+\index{Component@{Component}!Add\+Footprintto\+Matrix@{Add\+Footprintto\+Matrix}}
+\index{Add\+Footprintto\+Matrix@{Add\+Footprintto\+Matrix}!Component@{Component}}
+\subsubsection{\texorpdfstring{Add\+Footprintto\+Matrix()}{AddFootprinttoMatrix()}}
+{\footnotesize\ttfamily virtual void Component\+::\+Add\+Footprintto\+Matrix (\begin{DoxyParamCaption}\item[{class \hyperlink{classNetwork}{Network} \&}]{network }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classVoltageSource_a74f8a6a57480e9cff24414e106d2bbf1}{Voltage\+Source}, and \hyperlink{classResistor_a1e2d669a6b28b5b46457af5caae7462c}{Resistor}.
+
+\mbox{\Hypertarget{classComponent_a9af52e1878212622948ab2189f4f29dd}\label{classComponent_a9af52e1878212622948ab2189f4f29dd}} 
+\index{Component@{Component}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!Component@{Component}}
+\subsubsection{\texorpdfstring{Get\+Name()}{GetName()}}
+{\footnotesize\ttfamily std\+::string Component\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classComponent_af6503c2bf9a88eff198ffbfcc3e24876}\label{classComponent_af6503c2bf9a88eff198ffbfcc3e24876}} 
+\index{Component@{Component}!Get\+Node1@{Get\+Node1}}
+\index{Get\+Node1@{Get\+Node1}!Component@{Component}}
+\subsubsection{\texorpdfstring{Get\+Node1()}{GetNode1()}}
+{\footnotesize\ttfamily int Component\+::\+Get\+Node1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classComponent_aac8e1e6f5ecd3529912bd4afa0903921}\label{classComponent_aac8e1e6f5ecd3529912bd4afa0903921}} 
+\index{Component@{Component}!Get\+Node2@{Get\+Node2}}
+\index{Get\+Node2@{Get\+Node2}!Component@{Component}}
+\subsubsection{\texorpdfstring{Get\+Node2()}{GetNode2()}}
+{\footnotesize\ttfamily int Component\+::\+Get\+Node2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classComponent_a7c6ba16177143bc9945583a9c3df4c89}\label{classComponent_a7c6ba16177143bc9945583a9c3df4c89}} 
+\index{Component@{Component}!Get\+Values@{Get\+Values}}
+\index{Get\+Values@{Get\+Values}!Component@{Component}}
+\subsubsection{\texorpdfstring{Get\+Values()}{GetValues()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$double$>$ Component\+::\+Get\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classVoltageSource_a60bb1c5c07f668854a817d626f220f84}{Voltage\+Source}, and \hyperlink{classResistor_ad4d08c34efa99287438aac338d7012d7}{Resistor}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classComponent_a46343549452bda5ee9752f7a9bc15efb}\label{classComponent_a46343549452bda5ee9752f7a9bc15efb}} 
+\index{Component@{Component}!name@{name}}
+\index{name@{name}!Component@{Component}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Component\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classComponent_a7d8cd23c0aaff5c139b825e77c0b2051}\label{classComponent_a7d8cd23c0aaff5c139b825e77c0b2051}} 
+\index{Component@{Component}!node1@{node1}}
+\index{node1@{node1}!Component@{Component}}
+\subsubsection{\texorpdfstring{node1}{node1}}
+{\footnotesize\ttfamily int Component\+::node1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classComponent_af96df64e1eb5fac7dae7c674cac3d31e}\label{classComponent_af96df64e1eb5fac7dae7c674cac3d31e}} 
+\index{Component@{Component}!node2@{node2}}
+\index{node2@{node2}!Component@{Component}}
+\subsubsection{\texorpdfstring{node2}{node2}}
+{\footnotesize\ttfamily int Component\+::node2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/user/\+Documents/\+Spicy\+P\+P/src/\+Backend/\hyperlink{Component_8h}{Component.\+h}\end{DoxyCompactItemize}
