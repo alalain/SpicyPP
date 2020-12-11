@@ -10,6 +10,8 @@
 
 using namespace std;
 
+void rref(Matrix& rrefMatrix);
+
 Matrix::Matrix(int rows, int columns, vector<double> values)
 {
   this->values = vector<vector<double>>();
@@ -36,7 +38,128 @@ double Matrix::getValue(int row, int column) const {
   return values[row-1][column-1];
 }
 
+Matrix Matrix::getInverse() const {
+  //return if no SqaureMatrix
+  if(getRows() != getColumns())
+    return Matrix(0,0);
 
+  Matrix rrefMatrix = Matrix(getRows(), 2*getColumns());
+  //Fill rows of Matrix for RREF with additional IdentityMatrix
+  for(int i = 1; i <= getRows(); i++){
+    vector<double> row;
+    for(int j = 1; j <= getColumns(); j++)
+      row.push_back(getValue(i,j));
+    for(int j = 1; j <= getColumns(); j++){
+      if(i==j)
+        row.push_back(1.0);
+      else
+        row.push_back(0.0);
+    }
+    rrefMatrix.setValueRow(row,i);
+  }
+
+  rrefMatrix.MatrixShow();
+  rref(rrefMatrix);
+  rrefMatrix.MatrixShow();
+
+  //Read inverse out of rrefMatrix
+  Matrix inverse = Matrix(getRows(), getColumns());
+  for(int i = 1; i <= getRows(); i++) {
+    vector<double> row;
+    for(int j = 1; j <= getColumns(); j++){
+      row.push_back(rrefMatrix.getValue(i, j + getColumns()));
+    }
+    inverse.setValueRow(row, i);
+  }
+  inverse.MatrixShow();
+
+  return inverse;
+}
+
+
+void divideLine(Matrix& rrefMatrix, int line, double divider)
+{
+  int nDim = rrefMatrix.getRows();
+  if(divider != 0)
+  {
+    for(int i = 1; i <= nDim; i++)
+    {
+      rrefMatrix.setValue(rrefMatrix.getValue(line,i) / divider, line, i);
+    }
+  }
+}
+
+
+void reduceForward(Matrix& rrefMatrix, int line, int col)
+{
+  int nDim = rrefMatrix.getRows();
+  int mDim = rrefMatrix.getColumns();
+  double base = rrefMatrix.getValue(line,col);
+  for(int i = line+1; i <= mDim; i++)
+  {
+    if(rrefMatrix.getValue(i,col) != 0)
+    {
+      double factor = rrefMatrix.getValue(i,col) / base;
+      for(int j = 1; j <= nDim; j++)
+      {
+        rrefMatrix.setValue((rrefMatrix.getValue(i,j) - rrefMatrix.getValue(line,j) * factor),i,j);
+      }
+    }
+  }
+}
+
+void reduceBackward(Matrix& rrefMatrix, int line, int col)
+{
+  int nDim = rrefMatrix.getRows();
+  double base = rrefMatrix.getValue(line,col);
+  for(int i = line; i > 0; i--)
+  {
+    if(rrefMatrix.getValue(i,col) != 0)
+    {
+      double factor = rrefMatrix.getValue(i,col) / base;
+      for(int j = 1; j <= nDim; j++)
+      {
+        rrefMatrix.setValue((rrefMatrix.getValue(i,j) - rrefMatrix.getValue(line,j) * factor),i,j);
+      }
+    }
+  }
+}
+
+void rref(Matrix& rrefMatrix) {
+  int nDim = rrefMatrix.getRows();
+  int mDim = rrefMatrix.getColumns();
+  for(int i = 1; i <= mDim; i++)
+    {
+      int j = 1;
+      bool found = false;
+      while(j <= nDim && !found)
+      {
+        if(rrefMatrix.getValue(i,j) != 0)
+        {
+          found = true;
+          divideLine(rrefMatrix, i, rrefMatrix.getValue(i,j));
+          reduceForward(rrefMatrix, i,j);
+        }
+        ++j;
+      }
+    }
+    for(int i = mDim; i > 0; i--)
+    {
+      int j = 1;
+      bool found = false;
+      while(j <= nDim && !found)
+      {
+        if(rrefMatrix.getValue(i,j) == 1)
+        {
+          found = true;
+          reduceBackward(rrefMatrix, i,j);
+        }
+        ++j;
+      }
+    }
+}
+
+/*
 Matrix Matrix::getInverse() const
 {
   double* pivot = new double[values.size()]{0};
@@ -107,7 +230,7 @@ Matrix Matrix::getInverse() const
   }
   return result;
 }
-
+*/
 
 void Matrix::setValue(double value, int row, int column)
 {
@@ -151,31 +274,31 @@ void Matrix::setValueColumn(std::vector<double> inputValues, int column, double 
 void Matrix::setValueRow(std::vector<double> inputValues, int row)
 {
   int sizeOfInputValues = inputValues.size();
-    int sizeOfValues = values.size();
-
-    for(int i = 1; i <= sizeOfValues; ++i)
-    {
-      if(i <= sizeOfInputValues)
-      {
-        setValue(inputValues[i-1], i, row);
-      }
-    }
-}
-
-void Matrix::setValueRow(std::vector<double> inputValues, int row, double fillValue)
-{
-  int sizeOfInputValues = inputValues.size();
-  int sizeOfValues = values.size();
+  int sizeOfValues = getColumns();
 
   for(int i = 1; i <= sizeOfValues; ++i)
   {
     if(i <= sizeOfInputValues)
     {
-      setValue(inputValues[i-1], i, row);
+      setValue(inputValues[i-1], row, i);
+    }
+  }
+}
+
+void Matrix::setValueRow(std::vector<double> inputValues, int row, double fillValue)
+{
+  int sizeOfInputValues = inputValues.size();
+  int sizeOfValues = getColumns();
+
+  for(int i = 1; i <= sizeOfValues; ++i)
+  {
+    if(i <= sizeOfInputValues)
+    {
+      setValue(inputValues[i-1], row, i);
     }
     else
     {
-      setValue(fillValue ,i, row);
+      setValue(fillValue ,row, i);
     }
   }
 }
