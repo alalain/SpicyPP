@@ -41,7 +41,7 @@ double Matrix::getValue(int row, int column) const {
 Matrix Matrix::getInverse() const {
   //return if no SqaureMatrix
   if(getRows() != getColumns())
-    return Matrix(0,0);
+    throw range_error("not NxN -> not invertable");
 
   Matrix rrefMatrix = Matrix(getRows(), 2*getColumns());
   //Fill rows of Matrix for RREF with additional IdentityMatrix
@@ -79,7 +79,7 @@ Matrix Matrix::getInverse() const {
 
 void divideLine(Matrix& rrefMatrix, int line, double divider)
 {
-  int nDim = rrefMatrix.getRows();
+  int nDim = rrefMatrix.getColumns();
   if(divider != 0)
   {
     for(int i = 1; i <= nDim; i++)
@@ -92,8 +92,8 @@ void divideLine(Matrix& rrefMatrix, int line, double divider)
 
 void reduceForward(Matrix& rrefMatrix, int line, int col)
 {
-  int nDim = rrefMatrix.getRows();
-  int mDim = rrefMatrix.getColumns();
+  int nDim = rrefMatrix.getColumns();
+  int mDim = rrefMatrix.getRows();
   double base = rrefMatrix.getValue(line,col);
   for(int i = line+1; i <= mDim; i++)
   {
@@ -110,9 +110,9 @@ void reduceForward(Matrix& rrefMatrix, int line, int col)
 
 void reduceBackward(Matrix& rrefMatrix, int line, int col)
 {
-  int nDim = rrefMatrix.getRows();
+  int nDim = rrefMatrix.getColumns();
   double base = rrefMatrix.getValue(line,col);
-  for(int i = line; i > 0; i--)
+  for(int i = line-1; i > 0; i--)
   {
     if(rrefMatrix.getValue(i,col) != 0)
     {
@@ -126,8 +126,8 @@ void reduceBackward(Matrix& rrefMatrix, int line, int col)
 }
 
 void rref(Matrix& rrefMatrix) {
-  int nDim = rrefMatrix.getRows();
-  int mDim = rrefMatrix.getColumns();
+  int nDim = rrefMatrix.getColumns();
+  int mDim = rrefMatrix.getRows();
   for(int i = 1; i <= mDim; i++)
     {
       int j = 1;
@@ -143,7 +143,7 @@ void rref(Matrix& rrefMatrix) {
         ++j;
       }
     }
-    for(int i = mDim; i > 0; i--)
+    for(int i = mDim+1; i > 0; i--)
     {
       int j = 1;
       bool found = false;
@@ -157,80 +157,25 @@ void rref(Matrix& rrefMatrix) {
         ++j;
       }
     }
-}
 
-/*
-Matrix Matrix::getInverse() const
-{
-  double* pivot = new double[values.size()]{0};
-
-  int rows = values.size();
-  int colums = values[0].size();  // 1. Row because every Colum have equal size.
-  int rreduce = 0;
-
-  Matrix bigmatrix(rows,2*colums);
-  Matrix result(rows,colums,{});
-
-  bigmatrix.values= values;     //set equal, copy,
-
-  // Eigenmatrize added
-  for(int row = 0; row < rows; row++) {
-
-      bigmatrix.values[row].resize(rows+colums);  //because of the set equal the bigmatrix was shrinked.
-
-      for(int colum = colums; colum < 2*colums; colum++){
-      if(row == (colum-colums))
-       bigmatrix.values[row][colum] = 1.0;
-      else
-       bigmatrix.values[row][colum] = 0.0;
-      }
-  }
-
-////TODO delet after tested
-//cout<< "Einheitsvektor"<<endl;
-//bigmatrix.MatrixShow();
-
-  for(int row = 0; row < rows; row++) {
-    if( bigmatrix.values[row][row] != 0){
-      pivot[row]=bigmatrix.values[row][row];
-
-      for(int colum = 0; colum < 2*colums; colum++){
-        bigmatrix.values[row][colum] = bigmatrix.values[row][colum]/pivot[row];  // pivot should not be zero
-      }
-
-////TODO delet after tested
-//cout<< "Pivot Teilung"<<endl;
-//bigmatrix.MatrixShow();
-
-      for(rreduce = 0; rreduce < rows; rreduce++) {
-        if(rreduce != row){
-
-          double ratio = bigmatrix.values[rreduce][row] / bigmatrix.values[row][row];
-          for(int colum = 0; colum < 2*colums; colum++){
-            bigmatrix.values[rreduce][colum] -=  (bigmatrix.values[row][colum] * ratio);
-          }
+    Matrix switcheroo = Matrix(mDim, nDim);
+    for(int i = 1; i <= mDim; i++)
+    {
+      bool oneFound = false;
+      for(int j = 1; j <= mDim; j++){
+        if(rrefMatrix.getValue(j,i) == 1.0){
+          vector<double> row;
+          oneFound = true;
+          for(int k = 1; k <= nDim; k++)
+            row.push_back(rrefMatrix.getValue(j,k));
+          switcheroo.setValueRow(row,i);
         }
       }
-
-////TODO delet after tested
-//cout<< "Reihen reduzierung"<<endl;
-//bigmatrix.MatrixShow();
+      if(!oneFound)
+        throw range_error("Inverse doesn't exist because the Matrix is singular");
     }
-    else{   // shit pivot was 0 ???
-      delete [] pivot;
-      throw range_error("Inverse doesn't exist because the Matrix is singular");
-    }
-  }
-  delete [] pivot;
-  for (int i=0; i< rows; i++){
-    for(int j=0; j<colums; j++){
-      result.values[i][j]=bigmatrix.values[i][j+colums];
-    }
-
-  }
-  return result;
+    rrefMatrix = switcheroo;
 }
-*/
 
 void Matrix::setValue(double value, int row, int column)
 {
