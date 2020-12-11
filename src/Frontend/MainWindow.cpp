@@ -18,6 +18,7 @@ MainWindow::MainWindow(QWidget* parent)
   ui->Node2->setValidator(node2Validator);
   ui->Value->setValidator(valueValidator);
   ui->Component->setValidator(componentValidator);
+  ui->ErrorLabel->setText("ProTipp: Node 0 (GND) has to be in Network.");
 }
 
 MainWindow::~MainWindow()
@@ -32,10 +33,12 @@ void MainWindow::onReset()
   ui->SolList->clear();
   ui->CompList->show();
   ui->SolList->hide();
+  ui->ErrorLabel->setText("ProTipp: Node 0 (GND) has to be in Network.");
 }
 
 void MainWindow::onCalculate()
 {
+  ui->SolList->clear();
   std::vector<MeasureVal> solutions;
   network.GetNewestSolution(solutions);
   ui->CompList->hide();
@@ -89,7 +92,7 @@ void MainWindow::onAdd()
     ui->ErrorLabel->setText(errorMessage);
     return;
   }
-  ui->ErrorLabel->hide();
+  ui->ErrorLabel->setText("");
   double value = valueString.toDouble();
   int node1 = node1String.toInt();
   int node2 = node2String.toInt();

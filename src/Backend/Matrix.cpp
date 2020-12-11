@@ -58,9 +58,7 @@ Matrix Matrix::getInverse() const {
     rrefMatrix.setValueRow(row,i);
   }
 
-  rrefMatrix.MatrixShow();
   rref(rrefMatrix);
-  rrefMatrix.MatrixShow();
 
   //Read inverse out of rrefMatrix
   Matrix inverse = Matrix(getRows(), getColumns());
@@ -71,7 +69,6 @@ Matrix Matrix::getInverse() const {
     }
     inverse.setValueRow(row, i);
   }
-  inverse.MatrixShow();
 
   return inverse;
 }
