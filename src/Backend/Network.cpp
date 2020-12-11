@@ -13,6 +13,7 @@
 #include <string>
 #include <vector>
 #include <set>
+#include <stdexcept>
 
 using namespace std;
 
@@ -80,8 +81,13 @@ std::vector<std::string> Network::GetNewestNetlist()
 void Network::GetNewestSolution(std::vector<MeasureVal>& storeVals)
 {
   GenerateMatrixAndVector();
-  Matrix solutionVector = netMatrix.getInverse() * netVector;
-  solutionVector.MatrixShow();
+  Matrix solutionVector = Matrix(0,0);
+  try {
+     solutionVector = netMatrix.getInverse() * netVector;
+  }
+  catch(range_error& r){return;}
+
+
   int i = 1;
   for(set<int>::iterator it=nodes.begin(); it!=nodes.end(); ++it)
   {
